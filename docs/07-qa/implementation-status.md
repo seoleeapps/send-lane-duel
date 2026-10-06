@@ -17,7 +17,7 @@
 | --- | --- | --- |
 | 콘텐츠·순수 코어 경계 | 통과 | `bash scripts/check.sh` |
 | 참조 전투·런 | 60/60 + 40/40, assertion 962 | `tests/run_vectors.gd` |
-| 저장·복귀·정산·실패·백업 | 1,804 checks, 실패 0 | `tests/run_session.gd`, 별도 `user://tests-session/` |
+| 저장·복귀·정산·실패·백업 | 1,807 checks, 실패 0 | `tests/run_session.gd`, 별도 `user://tests-session/` |
 | 광고 정책 | 16 checks, 실패 0 | `tests/run_ads.gd`. 실제 SDK 시험 아님 |
 | 일일 재생 감사 | Python unittest | `tests/test_daily_verifier.py`: 벡터 40건, 거짓 결과·형식·음수 자리 거부 |
 | 실제 렌더와 입력 | 72 checks, 실패·Godot 오류 0 | `tests/run_ui.gd`, Apple M3 OpenGL Compatibility |

@@ -77,6 +77,15 @@ func _initialize() -> void:
 	invalid = game.data.duplicate(true)
 	invalid.active.ascension = -1
 	check(not disk.write_save(invalid), "invalid active rank rejected")
+	invalid = updated.duplicate(true)
+	invalid.session_index = []
+	check(not disk.write_save(invalid), "invalid session counter rejected")
+	invalid = updated.duplicate(true)
+	invalid.tutorial.completed = null
+	check(not disk.write_save(invalid), "invalid tutorial state rejected")
+	invalid = updated.duplicate(true)
+	invalid.settings.speed = true
+	check(not disk.write_save(invalid), "boolean speed rejected")
 	check(disk.write_save(updated), "disk second write")
 	var file: FileAccess = FileAccess.open(test_path, FileAccess.WRITE)
 	file.store_string("{broken")

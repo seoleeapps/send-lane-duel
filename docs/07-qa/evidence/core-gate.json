@@ -3,7 +3,7 @@
   "checkedAt": "2026-10-07",
   "stage": "Core software",
   "overallGatePassed": false,
-  "implementationFingerprint": "b23c3519d78908c93443ac11976f8518c48c145342387c54269709034250e112",
+  "implementationFingerprint": "d71cf2976c0caaa7b18b272f428ca4d6748d8548fbca31d9f00287261ce2338f",
   "checks": {
     "combatVectors": {
       "passed": true,
@@ -17,7 +17,7 @@
     },
     "persistence": {
       "passed": true,
-      "assertions": 1804
+      "assertions": 1807
     },
     "adPolicy": {
       "passed": true,
@@ -67,7 +67,7 @@
     },
     {
       "path": "docs/07-qa/evidence/core-check.txt",
-      "sha256": "3818cb93152a390a7e64e0920a6e41006764ff83b50770875aeb9fa1a5163517"
+      "sha256": "fea0ccd575db952a6fc423235efd6aa4b401f660041018248af451118a734888"
     },
     {
       "path": "docs/07-qa/evidence/firebase-rules.txt",

@@ -15,12 +15,15 @@ func valid(value: Variant) -> bool:
 		and value.profile.get("dex") is Array and value.get("settings") is Dictionary \
 		and value.get("active") is Dictionary and value.get("daily") is Dictionary
 	if not basic: return false
+	if not value.get("session_index") is int or value.session_index < 0: return false
+	if not value.get("tutorial") is Dictionary or not value.tutorial.get("version") is int \
+		or value.tutorial.version < 1 or not value.tutorial.get("completed") is bool: return false
 	for key in ["unlocked", "dex"]:
 		for id in value.profile[key]:
 			if not id is String: return false
 	if value.profile.highest_ascension < 0 or value.profile.highest_ascension > 5: return false
 	var settings: Dictionary = value.settings
-	if not settings.get("language") in ["en", "ko"] or not settings.get("speed") in [1, 2]: return false
+	if not settings.get("language") in ["en", "ko"] or not settings.get("speed") is int or not settings.speed in [1, 2]: return false
 	for key in ["large_text", "reduce_motion", "sound", "haptics"]:
 		if not settings.get(key) is bool: return false
 	for date in value.daily:
