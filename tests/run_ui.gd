@@ -137,6 +137,16 @@ func run_test() -> void:
 		for _i in range(4): await process_frame
 		check_bounds(main)
 		await capture("round-ko-large-%d" % dimensions.x)
+	root.size = Vector2i(360, 640)
+	root.content_scale_size = root.size
+	var original_mercs: Array = main.game.run.mercs.duplicate()
+	main.game.run.mercs = main.core.mercs.keys().slice(0, 5)
+	main._tab("mercs")
+	for _i in range(4): await process_frame
+	check_bounds(main)
+	await capture("mercs-max-ko-large-360")
+	main.game.run.mercs = original_mercs
+	main.allocation = "defense"
 	# Long lists must drag from their cards rather than requiring the scrollbar.
 	root.size = Vector2i(360, 640)
 	root.content_scale_size = root.size

@@ -3,7 +3,7 @@
   "checkedAt": "2026-10-07",
   "stage": "Core software",
   "overallGatePassed": false,
-  "implementationFingerprint": "d71cf2976c0caaa7b18b272f428ca4d6748d8548fbca31d9f00287261ce2338f",
+  "implementationFingerprint": "aca948b1603be8e45d22f9257419517eaf10b6f3af3d2cff780af890dcfa4296",
   "checks": {
     "combatVectors": {
       "passed": true,
@@ -26,7 +26,7 @@
     },
     "renderInput": {
       "passed": true,
-      "assertions": 72,
+      "assertions": 83,
       "renderer": "Apple M3 OpenGL Compatibility",
       "humanPlaytest": false
     },
@@ -62,6 +62,14 @@
   },
   "artifacts": [
     {
+      "path": "docs/07-qa/evidence/android-build.json",
+      "sha256": "bcbb31b9254e0fc052b7a16d00c7567d5582f4bea3f3e6da5c3c1f297cfbb346"
+    },
+    {
+      "path": "docs/07-qa/evidence/android-runtime.json",
+      "sha256": "ff2f12e92bae39cd4dce68fc026a20b6726540f2a2e42469e82041d84c8dbcdf"
+    },
+    {
       "path": "docs/07-qa/evidence/bm-validation.json",
       "sha256": "31c060feb7ab9631f0f00e8720ea937b01ab1768b4c87faa8f45cc6b333724f9"
     },
@@ -75,11 +83,11 @@
     },
     {
       "path": "docs/07-qa/evidence/outgame-implementation.json",
-      "sha256": "1fb5d655ee48a1706de1eb5207c47993e9091d8308c8a91b3f976c0f35831289"
+      "sha256": "1ae691cd905133bf8b2266128ecf6c2ab600eeaec44cdb8bed96e35f3441055c"
     },
     {
       "path": "docs/07-qa/evidence/outgame-release.json",
-      "sha256": "34c7322fbd81031add217e2ae9d71c6ad734851a52f4f67d8e52b11e8fa6675f"
+      "sha256": "0d909ff261c7ccc86c7ab41eec6cb0ab2dceda04229efc54fcf7d84e8b1f81d7"
     },
     {
       "path": "docs/07-qa/evidence/run-sim.json",
@@ -87,7 +95,7 @@
     },
     {
       "path": "docs/07-qa/evidence/ui-check.txt",
-      "sha256": "6935e9c5bed132f9201f8c64758ed70e349c43f9b50782fa3de408047b38f5f4"
+      "sha256": "9c4864277b87d18a1deb2122a0a35fb8a7d187336ab49d2089e4ac194cd48609"
     }
   ]
 }

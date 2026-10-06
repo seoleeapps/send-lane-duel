@@ -9,5 +9,6 @@ CAPTURE summary-en-360
 CAPTURE round-ko-large-360
 CAPTURE round-ko-large-390
 CAPTURE round-ko-large-430
+CAPTURE mercs-max-ko-large-360
 CAPTURE settlement-en-360
-UI checks=72 failures=0 renderer=gl_compatibility
+UI checks=83 failures=0 renderer=gl_compatibility

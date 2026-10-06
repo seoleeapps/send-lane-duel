@@ -1,8 +1,8 @@
 {
-  "sourceCommit": "10069af41fad665fc52b5dc1a735cbe607f471df",
+  "sourceCommit": "9991b2fc7966f22ef442c56a387c479f00ac341e",
   "path": "build/android/three-purses-core.apk",
-  "sha256": "264256edea67015faa766e1267716a9d8a4c5e38471e537a0beb3042cbf91f1e",
-  "bytes": 31702708,
+  "sha256": "bfb0e086c8e32104b5331799469bb73bcd6eed2c2641ef30d45746f0726040a4",
+  "bytes": 31810052,
   "package": "com.seoleeapps.sendlaneduel",
   "versionName": "0.1.0",
   "versionCode": 1,

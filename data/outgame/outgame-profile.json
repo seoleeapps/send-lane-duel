@@ -22,7 +22,7 @@
       ]
     },
     "settings_support": {
-      "implemented": true,
+      "implemented": false,
       "bindings": [
         "godot/ui/main.gd"
       ]

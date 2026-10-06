@@ -8,6 +8,10 @@
     },
     {
       "category": "missing_required",
+      "detail": "settings_support"
+    },
+    {
+      "category": "missing_required",
       "detail": "inbox"
     },
     {
