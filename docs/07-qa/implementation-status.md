@@ -50,3 +50,5 @@ Firebase 운영 접근과 외부 Owner 초대·과금 조회 제약은 [Firebase
 ## PR 검토
 
 게임 PR #1의 Godot Core CI는 소스 commit `9991b2f`에서 통과했다. Copilot 리뷰를 두 차례 요청했지만 주간 사용 한도(HTTP 429)로 의견을 생성하지 못했다. 직접 검토에서 잘못된 행동의 부분 적용, 저장 실패 시 진행 확정, 일일 기록 삭제 후 재제출, 팝업 입력 중 화면 제거, 손상된 세션 번호·설정의 시작 오류를 확인·보정하고 회귀 검사를 통과시켰다. 이 기록은 동료 리뷰 완료를 뜻하지 않는다. 최신 PR HEAD 검사 상태는 GitHub에서 별도로 확인한다.
+
+APK 구성 검사에서 검증 파일을 발견해 `build/**`와 `.github/**`를 export 제외 목록에 추가했다. `tools/inspect_core_apk.py`는 수정 전 APK를 거부하고 최종 APK의 제외 경로 0건·ARM64 ZIP/ELF 16KB 정렬을 확인한다.
