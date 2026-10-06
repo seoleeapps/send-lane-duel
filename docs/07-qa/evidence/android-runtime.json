@@ -34,5 +34,11 @@
       "path": "docs/07-qa/captures/android-title.png",
       "sha256": "6f56e52be200e5c9ebaf7cc3b62671b3fb7fad34e9de8aa02ff509fb13523247"
     }
-  ]
+  ],
+  "finalBuildSmoke": {
+    "sourceCommit": "fd65c8dae4377b88632994959ad76472e67c95fa",
+    "passed": true,
+    "savePreserved": true,
+    "runtimeErrors": 0
+  }
 }
