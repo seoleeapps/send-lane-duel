@@ -63,11 +63,15 @@
   "artifacts": [
     {
       "path": "docs/07-qa/evidence/android-build.json",
-      "sha256": "19d8932cdc9ac694a2edbafb3db886af26bd7fb95e4c7a83754e42d081492ff3"
+      "sha256": "5dcf20eaa70ddb654188d9b6f181a4b2e53c2ad8f8754fda4e8a80a9739135e4"
     },
     {
       "path": "docs/07-qa/evidence/android-runtime.json",
-      "sha256": "6520b754d478d957c2de7e0ac7805bbf4851c5fd0280f3e84e38aa20a9d3ac60"
+      "sha256": "c42724afb845d341db9fbdf7e5afe7429b8a19a44277cf5d0467b590bbd724dd"
+    },
+    {
+      "path": "docs/07-qa/evidence/apk-inspection.json",
+      "sha256": "d7287ffbea9ccd0e394fffca1c58b15d098d6017eb0f3099829d82fbfd3d5c41"
     },
     {
       "path": "docs/07-qa/evidence/bm-validation.json",

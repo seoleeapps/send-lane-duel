@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "sha256": "086721899e998fe44dcad28c52b9c73888ffd4766eb7def34593230a882b8349",
+  "bytes": 31627908,
+  "resourceCount": 35,
+  "unwantedResources": [],
+  "resourceCompressedBytes": 3378514,
+  "libraries": [
+    {
+      "library": "lib/arm64-v8a/libc++_shared.so",
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ]
+    },
+    {
+      "library": "lib/arm64-v8a/libgodot_android.so",
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ]
+    }
+  ]
+}
