@@ -1,0 +1,94 @@
+{
+ "schema": "send-lane-duel.mercenaries.v1",
+ "agentPurpose": "용병 8종(방어 속성 4 × 형태 2). 한 묶음 단위로 산다. 지휘관도 같은 표를 쓴다. name_* 는 세계관 확정 뒤 교체.",
+ "mercenaries": [
+  {
+   "id": "m_plate_swarm",
+   "name_ko": "중갑 무리",
+   "name_en": "Plate Pack",
+   "armor": "plate",
+   "form": "swarm",
+   "count": 6,
+   "hp": 5,
+   "leak": 1,
+   "cost": 8
+  },
+  {
+   "id": "m_plate_elite",
+   "name_ko": "중갑 정예",
+   "name_en": "Plate Champion",
+   "armor": "plate",
+   "form": "elite",
+   "count": 1,
+   "hp": 36,
+   "leak": 4,
+   "cost": 8
+  },
+  {
+   "id": "m_light_swarm",
+   "name_ko": "경갑 무리",
+   "name_en": "Light Pack",
+   "armor": "light",
+   "form": "swarm",
+   "count": 6,
+   "hp": 5,
+   "leak": 1,
+   "cost": 8
+  },
+  {
+   "id": "m_light_elite",
+   "name_ko": "경갑 정예",
+   "name_en": "Light Champion",
+   "armor": "light",
+   "form": "elite",
+   "count": 1,
+   "hp": 36,
+   "leak": 4,
+   "cost": 8
+  },
+  {
+   "id": "m_hide_swarm",
+   "name_ko": "외피 무리",
+   "name_en": "Hide Pack",
+   "armor": "hide",
+   "form": "swarm",
+   "count": 6,
+   "hp": 5,
+   "leak": 1,
+   "cost": 8
+  },
+  {
+   "id": "m_hide_elite",
+   "name_ko": "외피 정예",
+   "name_en": "Hide Champion",
+   "armor": "hide",
+   "form": "elite",
+   "count": 1,
+   "hp": 36,
+   "leak": 4,
+   "cost": 8
+  },
+  {
+   "id": "m_ward_swarm",
+   "name_ko": "결계 무리",
+   "name_en": "Ward Pack",
+   "armor": "ward",
+   "form": "swarm",
+   "count": 6,
+   "hp": 5,
+   "leak": 1,
+   "cost": 8
+  },
+  {
+   "id": "m_ward_elite",
+   "name_ko": "결계 정예",
+   "name_en": "Ward Champion",
+   "armor": "ward",
+   "form": "elite",
+   "count": 1,
+   "hp": 36,
+   "leak": 4,
+   "cost": 8
+  }
+ ]
+}

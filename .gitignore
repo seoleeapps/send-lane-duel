@@ -10,3 +10,4 @@ __pycache__/
 *.p12
 *.mobileprovision
 .firebase/
+node_modules/

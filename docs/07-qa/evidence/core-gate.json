@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-07",
+  "stage": "Core software",
+  "overallGatePassed": false,
+  "implementationFingerprint": "b23c3519d78908c93443ac11976f8518c48c145342387c54269709034250e112",
+  "checks": {
+    "combatVectors": {
+      "passed": true,
+      "matched": 60,
+      "total": 60
+    },
+    "runVectors": {
+      "passed": true,
+      "matched": 40,
+      "total": 40
+    },
+    "persistence": {
+      "passed": true,
+      "assertions": 1804
+    },
+    "adPolicy": {
+      "passed": true,
+      "assertions": 16,
+      "liveSdk": false
+    },
+    "renderInput": {
+      "passed": true,
+      "assertions": 72,
+      "renderer": "Apple M3 OpenGL Compatibility",
+      "humanPlaytest": false
+    },
+    "dailyVerifier": {
+      "passed": true,
+      "tests": 3
+    },
+    "firestoreRules": {
+      "passed": true,
+      "tests": 2,
+      "deployed": false
+    }
+  },
+  "humanPlaytest": {
+    "completed": 0,
+    "required": 5,
+    "passed": false
+  },
+  "artDirection": {
+    "status": "awaiting_user_selection",
+    "approved": false
+  },
+  "firebase": {
+    "project": "send-lane-duel",
+    "nativeAppsRegistered": true,
+    "runtimeSdkConnected": false,
+    "billingLinkedByThisTask": false,
+    "billingStateVerified": false
+  },
+  "release": {
+    "submitted": false,
+    "published": false
+  },
+  "artifacts": [
+    {
+      "path": "docs/07-qa/evidence/bm-validation.json",
+      "sha256": "31c060feb7ab9631f0f00e8720ea937b01ab1768b4c87faa8f45cc6b333724f9"
+    },
+    {
+      "path": "docs/07-qa/evidence/core-check.txt",
+      "sha256": "3818cb93152a390a7e64e0920a6e41006764ff83b50770875aeb9fa1a5163517"
+    },
+    {
+      "path": "docs/07-qa/evidence/firebase-rules.txt",
+      "sha256": "fe34128e9640d04c8348620ec1893f4dd8500113dd86263560c2c495549ebcf3"
+    },
+    {
+      "path": "docs/07-qa/evidence/outgame-implementation.json",
+      "sha256": "1fb5d655ee48a1706de1eb5207c47993e9091d8308c8a91b3f976c0f35831289"
+    },
+    {
+      "path": "docs/07-qa/evidence/outgame-release.json",
+      "sha256": "34c7322fbd81031add217e2ae9d71c6ad734851a52f4f67d8e52b11e8fa6675f"
+    },
+    {
+      "path": "docs/07-qa/evidence/run-sim.json",
+      "sha256": "08555e7ec79a1c0a1ff76137e33b5e43da884f150de3abca14d0838e1d149670"
+    },
+    {
+      "path": "docs/07-qa/evidence/ui-check.txt",
+      "sha256": "6935e9c5bed132f9201f8c64758ed70e349c43f9b50782fa3de408047b38f5f4"
+    }
+  ]
+}

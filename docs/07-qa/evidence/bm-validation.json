@@ -1,0 +1,17 @@
+{
+  "root": "/Users/syous/.agent/skills/game-monetization-framework",
+  "verdict": "PASS",
+  "errors": 0,
+  "warnings": 1,
+  "strict": true,
+  "scope": "structure-and-policy",
+  "issues": [
+    {
+      "severity": "WARN",
+      "code": "BM-073",
+      "file": "data/monetization/bm-profile.json",
+      "path": "remote_config[12].key",
+      "message": "어떤 배치도 참조하지 않는 원격 설정 키: interstitial_min_play_seconds"
+    }
+  ]
+}

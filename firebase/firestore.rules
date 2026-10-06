@@ -1,0 +1,48 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function own(uid) { return request.auth != null && request.auth.uid == uid; }
+    match /users/{uid} {
+      allow read, delete: if own(uid);
+      allow create, update: if own(uid)
+        && request.resource.data.keys().hasOnly(['profile', 'nickname', 'updatedAt', 'schemaVersion'])
+        && request.resource.data.schemaVersion == 1
+        && request.resource.data.profile is map
+        && request.resource.data.nickname is string
+        && request.resource.data.nickname.size() >= 2
+        && request.resource.data.nickname.size() <= 12
+        && request.resource.data.updatedAt == request.time;
+    }
+    match /daily/{date}/scores/{uid} {
+      allow read: if request.auth != null;
+      allow create: if own(uid)
+        && date.matches('^[0-9]{8}$')
+        && request.resource.data.keys().hasOnly(['score', 'nickname', 'rounds_used', 'gold', 'seed', 'preset', 'steps', 'rules_version', 'submittedAt'])
+        && request.resource.data.score is int
+        && request.resource.data.score >= 0 && request.resource.data.score <= 10000
+        && request.resource.data.rounds_used is int
+        && request.resource.data.rounds_used >= 1 && request.resource.data.rounds_used <= 28
+        && request.resource.data.gold is int && request.resource.data.gold >= 0
+        && request.resource.data.seed is int
+        && request.resource.data.seed == int(date)
+        && request.resource.data.preset in ['preset_a', 'preset_b', 'preset_c', 'preset_d']
+        && request.resource.data.preset == ['preset_a', 'preset_b', 'preset_c', 'preset_d'][int(date) % 4]
+        && request.resource.data['rules_version'] == 'send-lane-duel.rules.v1'
+        && request.resource.data.steps is list && request.resource.data.steps.size() <= 35
+        && request.resource.data.nickname is string
+        && request.resource.data.nickname.size() >= 2 && request.resource.data.nickname.size() <= 12
+        && request.resource.data.submittedAt == request.time
+        && date == string(request.time.year())
+          + (request.time.month() < 10 ? '0' : '') + string(request.time.month())
+          + (request.time.day() < 10 ? '0' : '') + string(request.time.day());
+      // Account deletion is a privileged server operation; clients cannot erase
+      // their first attempt and submit another score for the same UTC day.
+      allow update, delete: if false;
+    }
+    match /daily/{date}/top/{document} {
+      allow read: if request.auth != null;
+      allow write: if false;
+    }
+    match /{document=**} { allow read, write: if false; }
+  }
+}

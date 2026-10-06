@@ -1,0 +1,175 @@
+{
+  "schema": "send-lane-duel.rules.v1",
+  "agentPurpose": "런·판·전투·경제·지휘관·일일 도전의 상수 원장. docs/game-design/02-gdd.md 의 상수 표와 1:1. sim/run_sim.py 가 읽는다. 값 변경은 decision-log 의 DEC 로만.",
+  "run": {
+    "chapters": 4,
+    "rounds_per_chapter": 7,
+    "player_castle_hp": 26,
+    "heal_between_chapters": 3,
+    "slots": 6,
+    "start_gold": 20,
+    "base_income": 12,
+    "route_choices": 2,
+    "draft_choices": 3,
+    "timeout_castle_damage": [
+      8,
+      10,
+      12,
+      14
+    ],
+    "early_clear_gold_per_round": 12
+  },
+  "economy": {
+    "worker_cost": 10,
+    "worker_income": 3,
+    "worker_cap": 10,
+    "replace_refund_pct": 50,
+    "merc_income_per_pack": 1
+  },
+  "combat": {
+    "beats": 8,
+    "mult_scale": 10,
+    "mult_strong": 15,
+    "mult_neutral": 10,
+    "mult_weak": 6,
+    "min_damage": 1,
+    "attack_types": [
+      "pierce",
+      "blast",
+      "slash",
+      "arcane"
+    ],
+    "armor_types": [
+      "plate",
+      "light",
+      "hide",
+      "ward"
+    ],
+    "strong_against": {
+      "pierce": "plate",
+      "blast": "light",
+      "slash": "hide",
+      "arcane": "ward"
+    },
+    "weak_against": {
+      "pierce": "light",
+      "blast": "hide",
+      "slash": "ward",
+      "arcane": "plate"
+    }
+  },
+  "capture": {
+    "blocked_packs_per_captive": 2
+  },
+  "waves": {
+    "base_hp": 36,
+    "growth_pct": 110,
+    "pattern": [
+      "swarm",
+      "swarm",
+      "mixed",
+      "elite",
+      "swarm",
+      "mixed",
+      "boss"
+    ],
+    "swarm": {
+      "count_base": 8,
+      "count_per_round": 2,
+      "leak": 1
+    },
+    "elite": {
+      "count_base": 2,
+      "count_per_3_rounds": 1,
+      "leak": 3
+    },
+    "boss": {
+      "count": 1,
+      "leak": 8
+    }
+  },
+  "commander": {
+    "castle_hp": [
+      14,
+      18,
+      22,
+      26
+    ],
+    "income_pct": [
+      104,
+      118,
+      132,
+      146
+    ],
+    "start_defense_budget": [
+      20,
+      60,
+      120,
+      200
+    ],
+    "start_workers": [
+      0,
+      2,
+      4,
+      6
+    ],
+    "fill_slots_before_upgrade": 4
+  },
+  "ascension": {
+    "levels": 5,
+    "commander_income_pct_per_level": 12,
+    "commander_castle_hp_per_level": 2
+  },
+  "daily": {
+    "score_per_chapter": 1000,
+    "score_per_castle_hp": 10,
+    "score_per_saved_round": 50,
+    "tiebreak": [
+      "fewer_rounds_used",
+      "more_gold_left",
+      "earlier_submit"
+    ],
+    "scored_attempts_per_day": 1,
+    "seed": "utc_date_yyyymmdd_as_integer",
+    "preset": "preset index = seed mod preset count, in data/content/draft.json order",
+    "ascension": 0,
+    "continue_ad_enabled": false,
+    "interstitial_enabled": true
+  },
+  "rng": {
+    "algorithm": "xorshift32",
+    "shifts": [
+      13,
+      17,
+      5
+    ],
+    "stream_mix_multiplier": 2654435761,
+    "streams": {
+      "route": 1,
+      "wave": 2,
+      "draft": 3,
+      "commander": 4
+    }
+  },
+  "tutorial": {
+    "commander": "cmd_wall",
+    "castle_hp": 10,
+    "forced": [
+      {
+        "round": 0,
+        "action": "place",
+        "family": "fam_pierce"
+      },
+      {
+        "round": 1,
+        "action": "worker"
+      },
+      {
+        "round": 2,
+        "action": "pack"
+      }
+    ],
+    "ads_enabled": false,
+    "agentPurpose": "첫 런 1장의 체험형 튜토리얼. 지휘관과 성 체력을 고정하고 1~3판에 한 가지 행동을 강제한다. 시뮬레이터는 이 덮어쓰기를 적용하지 않는다."
+  }
+}

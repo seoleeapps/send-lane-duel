@@ -1,0 +1,29 @@
+name: Godot Core
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  core:
+    name: Godot Core
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - name: Install Godot 4.7.2
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends libfontconfig1
+          curl --fail --location --retry 2 https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.x86_64.zip -o /tmp/godot.zip
+          unzip -q /tmp/godot.zip -d /tmp/godot
+          sudo install /tmp/godot/Godot_v4.7.2-stable_linux.x86_64 /usr/local/bin/godot
+      - name: Validate core and persistence
+        run: bash scripts/check.sh
+      - uses: actions/upload-artifact@v7
+        if: failure()
+        with:
+          name: godot-core-logs
+          path: build/qa
+          retention-days: 3

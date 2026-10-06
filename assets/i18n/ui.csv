@@ -1,0 +1,122 @@
+keys,en,ko
+Retry,Retry,다시 시도
+Ready · 3/3,Ready · 3/3,준비 완료 · 3/3
+Hold. Grow. Send.,Hold. Grow. Send.,지키기 · 키우기 · 보내기
+"Core playtest build
+Offline expedition","Core playtest build
+Offline expedition","코어 플레이테스트 빌드
+오프라인 원정"
+Start,Start,시작
+Medals: %d,Medals: %d,훈장: %d
+Continue expedition,Continue expedition,이어서 출정
+Expedition,Expedition,출정
+Daily challenge,Daily challenge,일일 도전
+Codex,Codex,도감
+Settings,Settings,설정
+Offline · core playtest,Offline · core playtest,오프라인 · 코어 플레이테스트
+Choose your formation,Choose your formation,출정 편성
+Rank %d,Rank %d,격 %d
+Unlock · %d medals,Unlock · %d medals,해금 · 훈장 %d
+Back,Back,뒤로
+Chapter %d · choose a route,Chapter %d · choose a route,%d장 · 길 선택
+Defense,Defense,방어
+Wave armor,Wave armor,웨이브 속성
+Take this route,Take this route,이 길로
+Pause,Pause,일시정지
+Chapter %d · round %d/7,Chapter %d · round %d/7,%d장 · %d/7판
+Gold %d   ·   next income %d,Gold %d   ·   next income %d,금화 %d   ·   다음 수입 %d
+Hold,Hold,지키기
+Grow,Grow,키우기
+Send,Send,보내기
+Tap a slot to build or upgrade,Tap a slot to build or upgrade,자리를 눌러 배치·강화
+Workers +%d · %d gold,Workers +%d · %d gold,일꾼 +%d · 금화 %d
+Wave leak %d + ?  ·  enemy damage %d,Wave leak %d + ?  ·  enemy damage %d,예상 누수 %d + ?  ·  상대 피해 %d
+Reset,Reset,되돌리기
+Deploy,Deploy,출전
+Slot %d,Slot %d,자리 %d
+Upgrade · %d,Upgrade · %d,강화 · %d
+Battle,Battle,전투
+Skip,Skip,건너뛰기
+Round result,Round result,판 정산
+Your castle −%d    Rival −%d,Your castle −%d    Rival −%d,내 성 −%d    상대 성 −%d
+Mercenaries revealed,Mercenaries revealed,보낸 용병 공개
+Leaks into your castle,Leaks into your castle,내 성으로 샌 적
+Captives: %d,Captives: %d,포로: %d
+"Time limit: castle damage, no healing","Time limit: castle damage, no healing",제한 판 종료 · 성 피해 · 회복 없음
+Continue,Continue,계속
+Chapter reward,Chapter reward,장 보상
+Choose,Choose,선택
+Expedition complete,Expedition complete,런 정산
+Victory,Victory,완주
+Castle lost,Castle lost,원정 종료
+Score %d · medals +%d,Score %d · medals +%d,점수 %d · 훈장 +%d
+Saved on device. Leaderboard connection pending.,Saved on device. Leaderboard connection pending.,기기에 기록 저장 · 온라인 순위 연결 준비 중
+Return home,Return home,본진으로
+Expedition paused,Expedition paused,원정 일시정지
+Progress saved. Abandon this run?,Progress saved. Abandon this run?,진행은 저장되었습니다. 이 런을 포기할까요?
+Abandon,Abandon,포기
+Same seed · first attempt only · no continue,Same seed · first attempt only · no continue,같은 시드 · 첫 시도만 기록 · 이어하기 없음
+Offline play available. Scores remain on this device until online services are ready.,Offline play available. Scores remain on this device until online services are ready.,오프라인 플레이 가능 · 온라인 연결 전에는 기록이 기기에만 저장됩니다.
+Practice,Practice,연습
+Challenge,Challenge,도전
+Commander codex,Commander codex,지휘관 도감
+Hold %d%% · grow %d%% · send %d%%,Hold %d%% · grow %d%% · send %d%%,지키기 %d%% · 키우기 %d%% · 보내기 %d%%
+Large text,Large text,큰 글자
+Reduce motion,Reduce motion,움직임 줄이기
+Battle speed,Battle speed,전투 속도
+Delete device save,Delete device save,기기 저장 삭제
+"Delete medals, unlocks and saved run on this device?","Delete medals, unlocks and saved run on this device?",이 기기의 훈장·해금·진행 중인 런을 삭제할까요?
+fam_pierce,Marksmen,저격대
+fam_blast,Bombards,포격대
+fam_slash,Chargers,돌격대
+fam_arcane,Hexers,주술대
+m_plate_swarm,Plate Pack,중갑 무리
+m_plate_elite,Plate Champion,중갑 정예
+m_light_swarm,Light Pack,경갑 무리
+m_light_elite,Light Champion,경갑 정예
+m_hide_swarm,Hide Pack,외피 무리
+m_hide_elite,Hide Champion,외피 정예
+m_ward_swarm,Ward Pack,결계 무리
+m_ward_elite,Ward Champion,결계 정예
+cmd_wall,Bulwark,철벽
+cmd_rush,Charger,돌격
+cmd_greedy,Hoarder,욕심
+cmd_shifty,Trickster,변덕
+cmd_riposte,Counterpunch,역습
+cmd_sniper,Sharpshooter,저격
+preset_a,First March,첫 출정대
+preset_b,Blade and Spell,칼과 주문
+preset_c,Long Reach,긴 사거리
+preset_d,Full Charge,몰아치기
+boon_castle,Wall Repairs,성벽 보수
+boon_income,Tax Ledger,세금 장부
+boon_worker,Worker Guild,일꾼 조합
+boon_slot,Extra Platform,덧댄 진지
+boon_capture,Capture Net,포로 수용소
+boon_merc,Mercenary Deal,용병 단골
+boon_chapter_gold,Expedition Fund,출정 자금
+boon_beat,Drumbeat,북소리
+boon_upgrade,Workshop,대장간
+boon_breach,Siege Hammer,공성 망치
+깸,Broken,함락
+버팀,Held out,버팀
+성 함락,Castle lost,성 함락
+시간 초과,Time limit,시간 초과
+cmd_wall_tag,Focuses on defense,방어에 몰아 쓴다
+cmd_rush_tag,Sends mercenaries from the start,처음부터 계속 보낸다
+cmd_greedy_tag,"Grows for two rounds, then attacks",두 판 모았다가 몰아친다
+cmd_shifty_tag,Changes mercenaries every round,보내는 용병이 매 판 바뀐다
+cmd_riposte_tag,Counterattacks after castle damage,성이 깎이면 다음 판에 몰아친다
+cmd_sniper_tag,Targets your previous defense,내 진영의 약점을 노린다
+boon_castle_description,Castle HP +6,성 체력 +6
+boon_income_description,Income +2 each round,판마다 수입 +2
+boon_worker_description,Worker cost −2,일꾼 값 -2
+boon_slot_description,Defense slots +1,자리 +1
+boon_capture_description,Capture every blocked pack,막아 낸 묶음마다 포로가 된다
+boon_merc_description,Mercenary cost −1,용병 묶음 값 -1
+boon_chapter_gold_description,Gold +15 at chapter start,장을 시작할 때 금화 +15
+boon_beat_description,One extra defense beat,내 레인 전투 박자 +1
+boon_upgrade_description,Upgrade cost −3,강화 값 -3
+boon_breach_description,First castle hit +3 each chapter,장마다 지휘관 성에 준 첫 피해 +3
+New defender,New defender family,새 방어 계열
+New mercenary,New mercenary pack,새 용병 묶음

@@ -1,0 +1,26 @@
+{
+  "ok": false,
+  "stage": "implementation",
+  "errors": [
+    {
+      "category": "missing_required",
+      "detail": "tutorial"
+    },
+    {
+      "category": "missing_required",
+      "detail": "inbox"
+    },
+    {
+      "category": "missing_required",
+      "detail": "observability"
+    },
+    {
+      "category": "unconnected",
+      "detail": "tutorial actions/version/rewardKey"
+    },
+    {
+      "category": "unverified",
+      "detail": "automated"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "send-lane-duel.units.v1",
+  "agentPurpose": "방어 유닛 4계열 × 3단계. id 는 고정, name_* 는 세계관 확정 뒤 교체한다(DEC-004). mode single 은 맨 앞 적 하나를 hits 번, splash 는 앞에서부터 targets 명을 한 번씩 친다.",
+  "families": [
+    {"id": "fam_pierce", "name_ko": "저격대", "name_en": "Marksmen", "attack": "pierce", "mode": "single", "hits": 1, "targets": 1,
+     "tiers": [{"tier": 1, "cost": 10, "damage": 7}, {"tier": 2, "cost": 14, "damage": 18}, {"tier": 3, "cost": 22, "damage": 40}]},
+    {"id": "fam_blast", "name_ko": "포격대", "name_en": "Bombards", "attack": "blast", "mode": "splash", "hits": 1, "targets": 3,
+     "tiers": [{"tier": 1, "cost": 10, "damage": 2}, {"tier": 2, "cost": 14, "damage": 5}, {"tier": 3, "cost": 22, "damage": 11}]},
+    {"id": "fam_slash", "name_ko": "돌격대", "name_en": "Chargers", "attack": "slash", "mode": "single", "hits": 2, "targets": 1,
+     "tiers": [{"tier": 1, "cost": 10, "damage": 3}, {"tier": 2, "cost": 14, "damage": 8}, {"tier": 3, "cost": 22, "damage": 18}]},
+    {"id": "fam_arcane", "name_ko": "주술대", "name_en": "Hexers", "attack": "arcane", "mode": "splash", "hits": 1, "targets": 2,
+     "tiers": [{"tier": 1, "cost": 10, "damage": 3}, {"tier": 2, "cost": 14, "damage": 8}, {"tier": 3, "cost": 22, "damage": 17}]}
+  ]
+}
