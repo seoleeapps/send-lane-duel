@@ -1,0 +1,101 @@
+{
+ "schema": "send-lane-duel.commanders.v1",
+ "agentPurpose": "AI 지휘관 6종. split 은 판마다 금화를 [방어, 일꾼, 용병] 백분율로 나누는 표. merc_pick: favorite(장 시작 때 정한 한 종류), rotate(방어 속성을 판마다 다음으로, 형태 교대), weakest_point(직전 판 끝의 플레이어 진영에 가장 큰 피해를 주는 종류). 방어 계열 둘과 favorite 은 장 시작 때 commander 난수 흐름으로 정한다.",
+ "commanders": [
+  {
+   "id": "cmd_wall",
+   "name_ko": "철벽",
+   "tag_ko": "방어에 몰아 쓴다",
+   "split": {
+    "default": [
+     70,
+     20,
+     10
+    ]
+   },
+   "merc_pick": "favorite"
+  },
+  {
+   "id": "cmd_rush",
+   "name_ko": "돌격",
+   "tag_ko": "처음부터 계속 보낸다",
+   "split": {
+    "default": [
+     35,
+     5,
+     60
+    ]
+   },
+   "merc_pick": "favorite"
+  },
+  {
+   "id": "cmd_greedy",
+   "name_ko": "욕심",
+   "tag_ko": "두 판 모았다가 몰아친다",
+   "split": {
+    "default": [
+     30,
+     0,
+     70
+    ],
+    "rounds": {
+     "0": [
+      30,
+      70,
+      0
+     ],
+     "1": [
+      30,
+      70,
+      0
+     ]
+    }
+   },
+   "merc_pick": "favorite"
+  },
+  {
+   "id": "cmd_shifty",
+   "name_ko": "변덕",
+   "tag_ko": "보내는 용병이 매 판 바뀐다",
+   "split": {
+    "default": [
+     50,
+     10,
+     40
+    ]
+   },
+   "merc_pick": "rotate"
+  },
+  {
+   "id": "cmd_riposte",
+   "name_ko": "역습",
+   "tag_ko": "성이 깎이면 다음 판에 몰아친다",
+   "split": {
+    "default": [
+     55,
+     15,
+     30
+    ],
+    "after_damage": [
+     40,
+     0,
+     60
+    ]
+   },
+   "merc_pick": "favorite"
+  },
+  {
+   "id": "cmd_sniper",
+   "name_ko": "저격",
+   "tag_ko": "내 진영의 약점을 노린다",
+   "split": {
+    "default": [
+     55,
+     15,
+     30
+    ]
+   },
+   "merc_pick": "weakest_point"
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+{
+  "ok": false,
+  "stage": "release",
+  "errors": [
+    {
+      "category": "missing_required",
+      "detail": "tutorial"
+    },
+    {
+      "category": "missing_required",
+      "detail": "settings_support"
+    },
+    {
+      "category": "missing_required",
+      "detail": "inbox"
+    },
+    {
+      "category": "missing_required",
+      "detail": "observability"
+    },
+    {
+      "category": "unconnected",
+      "detail": "tutorial actions/version/rewardKey"
+    },
+    {
+      "category": "unverified",
+      "detail": "automated"
+    },
+    {
+      "category": "unverified",
+      "detail": "render"
+    },
+    {
+      "category": "unverified",
+      "detail": "device"
+    },
+    {
+      "category": "unverified",
+      "detail": "product_art"
+    },
+    {
+      "category": "unverified",
+      "detail": "market_sdk"
+    }
+  ]
+}

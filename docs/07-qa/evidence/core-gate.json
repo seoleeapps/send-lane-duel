@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-07",
+  "stage": "Core software",
+  "overallGatePassed": false,
+  "implementationFingerprint": "aca948b1603be8e45d22f9257419517eaf10b6f3af3d2cff780af890dcfa4296",
+  "checks": {
+    "combatVectors": {
+      "passed": true,
+      "matched": 60,
+      "total": 60
+    },
+    "runVectors": {
+      "passed": true,
+      "matched": 40,
+      "total": 40
+    },
+    "persistence": {
+      "passed": true,
+      "assertions": 1807
+    },
+    "adPolicy": {
+      "passed": true,
+      "assertions": 16,
+      "liveSdk": false
+    },
+    "renderInput": {
+      "passed": true,
+      "assertions": 83,
+      "renderer": "Apple M3 OpenGL Compatibility",
+      "humanPlaytest": false
+    },
+    "dailyVerifier": {
+      "passed": true,
+      "tests": 3
+    },
+    "firestoreRules": {
+      "passed": true,
+      "tests": 2,
+      "deployed": false
+    }
+  },
+  "humanPlaytest": {
+    "completed": 0,
+    "required": 5,
+    "passed": false
+  },
+  "artDirection": {
+    "status": "awaiting_user_selection",
+    "approved": false
+  },
+  "firebase": {
+    "project": "send-lane-duel",
+    "nativeAppsRegistered": true,
+    "runtimeSdkConnected": false,
+    "billingLinkedByThisTask": false,
+    "billingStateVerified": false
+  },
+  "release": {
+    "submitted": false,
+    "published": false
+  },
+  "artifacts": [
+    {
+      "path": "docs/07-qa/evidence/android-build.json",
+      "sha256": "19d8932cdc9ac694a2edbafb3db886af26bd7fb95e4c7a83754e42d081492ff3"
+    },
+    {
+      "path": "docs/07-qa/evidence/android-runtime.json",
+      "sha256": "6520b754d478d957c2de7e0ac7805bbf4851c5fd0280f3e84e38aa20a9d3ac60"
+    },
+    {
+      "path": "docs/07-qa/evidence/bm-validation.json",
+      "sha256": "31c060feb7ab9631f0f00e8720ea937b01ab1768b4c87faa8f45cc6b333724f9"
+    },
+    {
+      "path": "docs/07-qa/evidence/core-check.txt",
+      "sha256": "fea0ccd575db952a6fc423235efd6aa4b401f660041018248af451118a734888"
+    },
+    {
+      "path": "docs/07-qa/evidence/firebase-rules.txt",
+      "sha256": "0c3953d5afcb72f433a068bc817b9b2bfb0462b11d7de13710e7c678847c9f9a"
+    },
+    {
+      "path": "docs/07-qa/evidence/outgame-implementation.json",
+      "sha256": "1ae691cd905133bf8b2266128ecf6c2ab600eeaec44cdb8bed96e35f3441055c"
+    },
+    {
+      "path": "docs/07-qa/evidence/outgame-release.json",
+      "sha256": "0d909ff261c7ccc86c7ab41eec6cb0ab2dceda04229efc54fcf7d84e8b1f81d7"
+    },
+    {
+      "path": "docs/07-qa/evidence/run-sim.json",
+      "sha256": "08555e7ec79a1c0a1ff76137e33b5e43da884f150de3abca14d0838e1d149670"
+    },
+    {
+      "path": "docs/07-qa/evidence/ui-check.txt",
+      "sha256": "9c4864277b87d18a1deb2122a0a35fb8a7d187336ab49d2089e4ac194cd48609"
+    }
+  ]
+}

@@ -1,0 +1,606 @@
+{
+  "kind": "bm-profile",
+  "framework_version": "1.1.0",
+  "game_id": "send-lane-duel",
+  "title_ko": "Three Purses",
+  "template_id": "ad-first-interstitial",
+  "genre_tag": "타워디펜스",
+  "plc_phase": "prototype",
+  "competitive": {
+    "mode": "leaderboard"
+  },
+  "agentPurpose": "send-lane-duel 의 수익화 프로필. 전면 광고가 주 수익, 보상형이 보조다. 결제 상품은 없다(DEC-003 재개정, DEC-M03·DEC-M18·DEC-M19). 전면은 장 종료와 런 정산이라는 자연 휴지에서만, 두 번째 세션부터 나온다. 광고 제거 상품이 없으므로 전면 광고의 마찰은 빈도·시점 제한과 원격 끄기 스위치로만 다룬다. 전투력·금화·용병은 팔지 않는다. 일일 도전에서는 이어하기 보상형을 끈다.",
+  "markets": {
+    "google_play": {
+      "enabled": true
+    },
+    "app_store": {
+      "enabled": true
+    },
+    "apps_in_toss": {
+      "enabled": false
+    }
+  },
+  "currencies": [
+    {
+      "id": "medal",
+      "name_ko": "훈장",
+      "kind": "soft",
+      "purchasable": false,
+      "ad_earnable": true,
+      "agentPurpose": "런 정산으로 버는 계정 재화. 출정 편성 해금과 깃발 꾸미기의 싱크. 팔지 않는다. 보상형 광고는 정산 훈장을 2배로 만든다. 런 안의 전투력에는 영향이 없다."
+    }
+  ],
+  "hurdles": [
+    {
+      "hurdle_id": "first_fail",
+      "type": "difficulty_spike",
+      "where": {
+        "kind": "progression",
+        "milestone": "chapter_2_to_4"
+      },
+      "expected_first_encounter_min": 8,
+      "free_path": {
+        "kind": "skill",
+        "description": "런은 끝나고 훈장은 그대로 받는다. 다음 런에서 지휘관 성향을 읽어 넘는다. 시뮬: 도감 지식이 있는 봇 완주 52%, 없는 봇 10%(sim/out/run_sim.txt)",
+        "expected_minutes": 8
+      },
+      "paid_path": {
+        "product_skus": [],
+        "placement_ids": [
+          "rewarded_continue"
+        ],
+        "expected_minutes": 1
+      },
+      "motives": [
+        "insurance_continue"
+      ],
+      "agentPurpose": "성이 함락되거나 시간 초과로 런이 끝나는 순간. 광고 1회로 그 판을 성 체력 8 로 다시 시작한다. 런당 1회, 일일 도전에서는 비활성.",
+      "name_ko": "런 실패"
+    }
+  ],
+  "products": [],
+  "ad_placements": [
+    {
+      "placement_id": "rewarded_result_bonus",
+      "format": "rewarded",
+      "trigger": {
+        "kind": "settlement",
+        "screen_hint": "런 정산 화면(완주·실패 모두)"
+      },
+      "cooldown_s": 60,
+      "daily_cap": 6,
+      "session_cap": 1,
+      "first_eligible_at": {
+        "session_index": 1
+      },
+      "never_at": [
+        "app_open",
+        "during_load",
+        "during_tutorial",
+        "mid_action",
+        "after_purchase_flow"
+      ],
+      "enabled_default": false,
+      "markets": [
+        "google_play",
+        "app_store"
+      ],
+      "opt_in": true,
+      "closable": true,
+      "expected": {
+        "view_rate": {
+          "value": 0.3,
+          "source_ref": "SRC-217",
+          "hypothesis": true
+        },
+        "duration_s": {
+          "value": 30,
+          "hypothesis": true
+        }
+      },
+      "rc_bindings": {
+        "enabled": "rewarded_result_bonus_enabled",
+        "cooldown_s": "rewarded_result_bonus_cooldown_s",
+        "session_cap": "rewarded_result_bonus_session_cap",
+        "daily_cap": "rewarded_result_bonus_daily_cap"
+      },
+      "analytics": {
+        "events": [
+          {
+            "name": "ad_requested",
+            "params": [
+              "app_market",
+              "runtime_platform",
+              "release_version"
+            ]
+          },
+          {
+            "name": "ad_impression",
+            "params": [
+              "app_market",
+              "runtime_platform",
+              "release_version"
+            ]
+          },
+          {
+            "name": "ad_failed",
+            "params": [
+              "app_market",
+              "runtime_platform",
+              "release_version"
+            ]
+          },
+          {
+            "name": "rewarded_earned",
+            "params": [
+              "app_market",
+              "runtime_platform",
+              "release_version"
+            ]
+          }
+        ]
+      },
+      "agentPurpose": "런 정산에서 받은 훈장을 2배로 만든다. 옵트인, 보상 내용을 버튼에 미리 적는다. 런 결과와 일일 도전 순위에 영향이 없다.",
+      "reward": {
+        "currency_id": "medal",
+        "amount": 0,
+        "affects_competitive_outcome": false
+      },
+      "reward_grant": "on_user_earned_reward",
+      "reward_disclosed_before": true
+    },
+    {
+      "placement_id": "rewarded_continue",
+      "format": "rewarded",
+      "trigger": {
+        "kind": "level_fail",
+        "screen_hint": "런 실패 화면(성 함락 또는 시간 초과 직후)"
+      },
+      "cooldown_s": 120,
+      "daily_cap": 4,
+      "session_cap": 1,
+      "first_eligible_at": {
+        "session_index": 1
+      },
+      "never_at": [
+        "app_open",
+        "during_load",
+        "during_tutorial",
+        "mid_action",
+        "after_purchase_flow"
+      ],
+      "enabled_default": false,
+      "markets": [
+        "google_play",
+        "app_store"
+      ],
+      "opt_in": true,
+      "closable": true,
+      "expected": {
+        "view_rate": {
+          "value": 0.3,
+          "source_ref": "SRC-217",
+          "hypothesis": true
+        },
+        "duration_s": {
+          "value": 30,
+          "hypothesis": true
+        }
+      },
+      "rc_bindings": {
+        "enabled": "rewarded_continue_enabled",
+        "cooldown_s": "rewarded_continue_cooldown_s",
+        "session_cap": "rewarded_continue_session_cap",
+        "daily_cap": "rewarded_continue_daily_cap"
+      },
+      "analytics": {
+        "events": [
+          {
+            "name": "ad_requested",
+            "params": [
+              "app_market",
+              "runtime_platform",
+              "release_version"
+            ]
+          },
+          {
+            "name": "ad_impression",
+            "params": [
+              "app_market",
+              "runtime_platform",
+              "release_version"
+            ]
+          },
+          {
+            "name": "ad_failed",
+            "params": [
+              "app_market",
+              "runtime_platform",
+              "release_version"
+            ]
+          },
+          {
+            "name": "rewarded_earned",
+            "params": [
+              "app_market",
+              "runtime_platform",
+              "release_version"
+            ]
+          }
+        ]
+      },
+      "agentPurpose": "런이 끝난 직후 한 번, 성 체력 8 로 실패한 판을 다시 시작하게 한다. 런당 1회. 런 결과에 영향을 주므로 일일 도전(순위표)에서는 제안하지 않는다(rules.daily.ads_enabled=false). 광고가 실패하거나 없으면 버튼을 숨기고 런 종료로 진행한다.",
+      "reward": {
+        "currency_id": "medal",
+        "amount": 0,
+        "affects_competitive_outcome": true
+      },
+      "reward_grant": "on_user_earned_reward",
+      "reward_disclosed_before": true
+    },
+    {
+      "placement_id": "interstitial_level_end",
+      "format": "interstitial",
+      "trigger": {
+        "kind": "level_end",
+        "screen_hint": "장 통과 뒤 보상을 고른 직후(길 선택으로 넘어가기 전), 런 정산을 닫고 본진으로 돌아갈 때"
+      },
+      "cooldown_s": 120,
+      "daily_cap": 8,
+      "session_cap": 3,
+      "first_eligible_at": {
+        "session_index": 2
+      },
+      "never_at": [
+        "app_open",
+        "before_first_interaction",
+        "during_load",
+        "during_tutorial",
+        "mid_action",
+        "after_purchase_flow"
+      ],
+      "enabled_default": false,
+      "markets": [
+        "google_play",
+        "app_store"
+      ],
+      "opt_in": false,
+      "closable": true,
+      "expected": {
+        "view_rate": {
+          "value": 0.9,
+          "source_ref": "SRC-215",
+          "hypothesis": true
+        },
+        "duration_s": {
+          "value": 15,
+          "hypothesis": true
+        }
+      },
+      "rc_bindings": {
+        "enabled": "interstitial_level_end_enabled",
+        "cooldown_s": "interstitial_level_end_cooldown_s",
+        "session_cap": "interstitial_level_end_session_cap",
+        "daily_cap": "interstitial_level_end_daily_cap"
+      },
+      "analytics": {
+        "events": [
+          {
+            "name": "ad_requested",
+            "params": [
+              "app_market",
+              "runtime_platform",
+              "release_version"
+            ]
+          },
+          {
+            "name": "ad_impression",
+            "params": [
+              "app_market",
+              "runtime_platform",
+              "release_version"
+            ]
+          },
+          {
+            "name": "ad_failed",
+            "params": [
+              "app_market",
+              "runtime_platform",
+              "release_version"
+            ]
+          }
+        ]
+      },
+      "agentPurpose": "전면 광고. 장과 장 사이, 런과 런 사이의 자연 휴지에서만 나온다. 판 도중·전투 중·튜토리얼·앱 실행 직후에는 나오지 않는다. 두 번째 세션부터, 120초 간격, 세션 3회·하루 8회. 5초 안에 닫을 수 있어야 하고 뒤로 가기로도 닫힌다(POL-331). 보상형 광고를 본 직후의 휴지에서는 건너뛴다. 광고 제거 상품은 없다(DEC-M19).",
+      "backoff_s": [
+        120,
+        240,
+        360
+      ]
+    }
+  ],
+  "caps": {
+    "session_length_expected_min": 8,
+    "sessions_per_day_expected": {
+      "value": 2.0,
+      "hypothesis": true
+    },
+    "interstitial_session_reset_s": 1800
+  },
+  "remote_config": [
+    {
+      "key": "rewarded_result_bonus_enabled",
+      "type": "bool",
+      "default": false,
+      "range": {},
+      "purpose": "rewarded_result_bonus kill-switch"
+    },
+    {
+      "key": "rewarded_result_bonus_cooldown_s",
+      "type": "int",
+      "default": 60,
+      "range": {
+        "min": 0,
+        "max": 600
+      },
+      "purpose": "rewarded_result_bonus 쿨다운(초)"
+    },
+    {
+      "key": "rewarded_result_bonus_session_cap",
+      "type": "int",
+      "default": 1,
+      "range": {
+        "min": 0,
+        "max": 4
+      },
+      "purpose": "rewarded_result_bonus 세션 상한"
+    },
+    {
+      "key": "rewarded_result_bonus_daily_cap",
+      "type": "int",
+      "default": 6,
+      "range": {
+        "min": 0,
+        "max": 12
+      },
+      "purpose": "rewarded_result_bonus 일 상한"
+    },
+    {
+      "key": "interstitial_level_end_enabled",
+      "type": "bool",
+      "default": false,
+      "range": {},
+      "purpose": "interstitial_level_end kill-switch"
+    },
+    {
+      "key": "interstitial_level_end_cooldown_s",
+      "type": "int",
+      "default": 120,
+      "range": {
+        "min": 0,
+        "max": 600
+      },
+      "purpose": "interstitial_level_end 쿨다운(초)"
+    },
+    {
+      "key": "interstitial_level_end_session_cap",
+      "type": "int",
+      "default": 3,
+      "range": {
+        "min": 0,
+        "max": 6
+      },
+      "purpose": "interstitial_level_end 세션 상한"
+    },
+    {
+      "key": "interstitial_level_end_daily_cap",
+      "type": "int",
+      "default": 8,
+      "range": {
+        "min": 0,
+        "max": 16
+      },
+      "purpose": "interstitial_level_end 일 상한"
+    },
+    {
+      "key": "rewarded_continue_enabled",
+      "type": "bool",
+      "default": false,
+      "range": {},
+      "purpose": "rewarded_continue kill-switch"
+    },
+    {
+      "key": "rewarded_continue_cooldown_s",
+      "type": "int",
+      "default": 120,
+      "range": {
+        "min": 0,
+        "max": 600
+      },
+      "purpose": "rewarded_continue 쿨다운(초)"
+    },
+    {
+      "key": "rewarded_continue_session_cap",
+      "type": "int",
+      "default": 1,
+      "range": {
+        "min": 0,
+        "max": 4
+      },
+      "purpose": "rewarded_continue 세션 상한"
+    },
+    {
+      "key": "rewarded_continue_daily_cap",
+      "type": "int",
+      "default": 4,
+      "range": {
+        "min": 0,
+        "max": 12
+      },
+      "purpose": "rewarded_continue 일 상한"
+    },
+    {
+      "key": "interstitial_min_play_seconds",
+      "type": "int",
+      "default": 180,
+      "range": {
+        "min": 180,
+        "max": 1800
+      },
+      "purpose": "전면 광고 첫 노출까지 실제 플레이한 시간. 최소 3분."
+    }
+  ],
+  "kpi_targets": {
+    "d1": {
+      "target": 28,
+      "min": 20,
+      "max": 40,
+      "inherited_from_template": true,
+      "source_ref": "SRC-513"
+    },
+    "d3": {
+      "target": 16,
+      "min": 10,
+      "max": 28,
+      "inherited_from_template": true,
+      "source_ref": "SRC-513"
+    },
+    "d7": {
+      "target": 12,
+      "min": 4,
+      "max": 20,
+      "inherited_from_template": true,
+      "source_ref": "SRC-513"
+    },
+    "d30": {
+      "target": 5,
+      "min": 1,
+      "max": 10,
+      "inherited_from_template": true,
+      "source_ref": "SRC-107"
+    },
+    "arpdau_ad": {
+      "target": 0.0,
+      "min": 0.0,
+      "max": 0.0006,
+      "inherited_from_template": true,
+      "source_ref": "SRC-234"
+    },
+    "arpdau_iap": {
+      "target": 0.0,
+      "min": 0.0,
+      "max": 0.0001,
+      "inherited_from_template": true,
+      "source_ref": "SRC-116"
+    },
+    "payer_conv": {
+      "target": 0,
+      "min": 0,
+      "max": 0.8999999999999999,
+      "inherited_from_template": true,
+      "hypothesis": true
+    },
+    "arppu": {
+      "target": 0,
+      "min": 0,
+      "max": 15.0,
+      "inherited_from_template": true,
+      "source_ref": "SRC-115"
+    },
+    "rewarded_views_per_dau": {
+      "target": 0.0,
+      "min": 0.0,
+      "max": 0.02,
+      "inherited_from_template": true,
+      "source_ref": "SRC-207"
+    },
+    "interstitials_per_dau": {
+      "target": 0.0,
+      "min": 0.0,
+      "max": 0.04,
+      "inherited_from_template": true,
+      "source_ref": "SRC-215"
+    },
+    "ltv_d90": {
+      "target": 0.0,
+      "min": 0.0,
+      "max": 0.008,
+      "inherited_from_template": true,
+      "source_ref": "SRC-119"
+    },
+    "sessions_per_dau": {
+      "target": 0,
+      "min": 0,
+      "max": 9.0,
+      "inherited_from_template": true,
+      "source_ref": "SRC-102"
+    },
+    "session_length_min": {
+      "target": 0,
+      "min": 0,
+      "max": 12.0,
+      "inherited_from_template": true,
+      "source_ref": "SRC-102"
+    },
+    "rewarded_completion": {
+      "target": 0,
+      "min": 0,
+      "max": 240.0,
+      "inherited_from_template": true,
+      "source_ref": "SRC-123"
+    },
+    "ad_removal_conv": {
+      "target": 0,
+      "min": 0,
+      "max": 1.5,
+      "inherited_from_template": true,
+      "hypothesis": true
+    }
+  },
+  "simulation": {
+    "assumptions": {
+      "region": "KR",
+      "cohort_size": 1000,
+      "ecpm_source": "benchmarks"
+    },
+    "last_result": {
+      "computed_at": "2026-10-06T13:53:43Z",
+      "computed_with_framework_version": "1.1.0",
+      "inputs_hash": "c36b940bca43b32dde4b8e48389446749e54a52dc2b1f983e883691bff26606e",
+      "retention_fit": {
+        "a": 0.286,
+        "b": 0.4988,
+        "active_days_d90": 6.04,
+        "active_days_d365": 11.57
+      },
+      "arpdau_usd": {
+        "ads": 0.0,
+        "iap": 0.0,
+        "total": 0.0
+      },
+      "ltv_usd": {
+        "d30": 0.0,
+        "d90": 0.0,
+        "d180": 0.0,
+        "d365": 0.0
+      },
+      "revenue_split": {
+        "ads": 0.0,
+        "iap": 0.0
+      },
+      "verdict": "WARN",
+      "warnings": [
+        "입력의 56% 가 가설입니다. 판정은 WARN 을 넘지 못합니다."
+      ]
+    }
+  },
+  "decisions": [
+    "DEC-M03",
+    "DEC-M18",
+    "DEC-M19",
+    "DEC-003",
+    "DEC-024",
+    "DEC-025"
+  ]
+}

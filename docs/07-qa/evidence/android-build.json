@@ -1,0 +1,37 @@
+{
+  "sourceCommit": "fd65c8dae4377b88632994959ad76472e67c95fa",
+  "path": "build/android/three-purses-core.apk",
+  "sha256": "a817ec1c1f1600c15c47e33d5797129a8f312ed74fc3c9e2fd71eb9bf7bb8eb5",
+  "bytes": 31851462,
+  "package": "com.seoleeapps.sendlaneduel",
+  "versionName": "0.1.0",
+  "versionCode": 1,
+  "debugSigned": true,
+  "minSdk": 24,
+  "targetSdk": 36,
+  "abis": [
+    "arm64-v8a"
+  ],
+  "zipAlignment16KB": true,
+  "elfLoadAlignment16KB": true,
+  "libraries": [
+    {
+      "library": "lib/arm64-v8a/libc++_shared.so",
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ]
+    },
+    {
+      "library": "lib/arm64-v8a/libgodot_android.so",
+      "loadAlignments": [
+        16384,
+        16384,
+        16384
+      ]
+    }
+  ],
+  "actual16KBDeviceTested": false,
+  "actualPhoneTested": false
+}

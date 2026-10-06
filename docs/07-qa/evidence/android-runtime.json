@@ -1,0 +1,44 @@
+{
+  "sourceCommit": "9991b2fc7966f22ef442c56a387c479f00ac341e",
+  "device": "Android 16 ARM64 emulator-5560",
+  "pageSize": 4096,
+  "actualPhone": false,
+  "passed": true,
+  "checks": {
+    "touchBuild": true,
+    "touchDeployAndSkip": true,
+    "roundSummary": true,
+    "forceStopRestoreActiveAndProfile": true,
+    "sessionCounterIncrement": true,
+    "processRuntimeNoGodotErrors": true
+  },
+  "savedSteps": 2,
+  "captures": [
+    {
+      "path": "docs/07-qa/captures/android-battle.png",
+      "sha256": "c2539b0341d69c3312ab82e42e90536b81b256fef42a0ac6f7800bda47a94aa2"
+    },
+    {
+      "path": "docs/07-qa/captures/android-round-before-restart.png",
+      "sha256": "a9b92385c9a4475634990cb4a9e7a7381f1c6530aea74b8d8bcae955b789bf4d"
+    },
+    {
+      "path": "docs/07-qa/captures/android-round-resumed.png",
+      "sha256": "a9b92385c9a4475634990cb4a9e7a7381f1c6530aea74b8d8bcae955b789bf4d"
+    },
+    {
+      "path": "docs/07-qa/captures/android-summary.png",
+      "sha256": "cdd828e427db7bf69646caa4833c4310d84c15b643df3f06f9e5833eb44e9853"
+    },
+    {
+      "path": "docs/07-qa/captures/android-title.png",
+      "sha256": "6f56e52be200e5c9ebaf7cc3b62671b3fb7fad34e9de8aa02ff509fb13523247"
+    }
+  ],
+  "finalBuildSmoke": {
+    "sourceCommit": "fd65c8dae4377b88632994959ad76472e67c95fa",
+    "passed": true,
+    "savePreserved": true,
+    "runtimeErrors": 0
+  }
+}

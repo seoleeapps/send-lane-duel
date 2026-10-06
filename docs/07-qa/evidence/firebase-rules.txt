@@ -1,0 +1,45 @@
+i  emulators: Starting emulators: firestore
+i  emulators: Detected demo project ID "demo-three-purses", emulated services will use a demo configuration and attempts to access non-emulated services for this project will fail.
+i  firestore: Firestore Emulator logging to firestore-debug.log
+✔  firestore: Firestore Emulator was started in standard edition.
+✔  firestore: Firestore Emulator UI websocket is running on 9151.
+i  Running script: npm test
+
+> test
+> node --test rules.test.mjs
+
+[2026-10-06T14:55:38.543Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x2448d56b error. Code: 7 Message: 7 PERMISSION_DENIED:
+false for 'create' @ L7, false for 'create' @ L46, false for 'update' @ L7, false for 'update' @ L46
+[2026-10-06T14:55:38.551Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x2448d56c error. Code: 7 Message: 7 PERMISSION_DENIED:
+false for 'delete' @ L6, false for 'delete' @ L46
+✔ private backups reject unauthenticated and other users (859.713791ms)
+[2026-10-06T14:55:38.611Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x2448d56d error. Code: 7 Message: 7 PERMISSION_DENIED:
+evaluation error at L18:24 for 'create' @ L18, false for 'create' @ L46, false for 'update' @ L40, false for 'update' @ L46, false for 'update' @ L40, false for 'update' @ L46
+[2026-10-06T14:55:38.618Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x2448d56e error. Code: 7 Message: 7 PERMISSION_DENIED:
+false for 'delete' @ L40, false for 'delete' @ L46
+[2026-10-06T14:55:38.635Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x2448d56f error. Code: 7 Message: 7 PERMISSION_DENIED:
+false for 'create' @ L18, false for 'create' @ L46, false for 'update' @ L40, false for 'update' @ L46
+[2026-10-06T14:55:38.644Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x2448d570 error. Code: 7 Message: 7 PERMISSION_DENIED:
+false for 'create' @ L44, false for 'create' @ L46, false for 'update' @ L44, false for 'update' @ L46
+[2026-10-06T14:55:38.653Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x2448d571 error. Code: 7 Message: 7 PERMISSION_DENIED:
+evaluation error at L18:24 for 'create' @ L18, false for 'create' @ L46, false for 'update' @ L40, false for 'update' @ L46, false for 'create' @ L18, false for 'create' @ L46
+[2026-10-06T14:55:38.662Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x2448d572 error. Code: 7 Message: 7 PERMISSION_DENIED:
+false for 'create' @ L18, false for 'create' @ L46, false for 'update' @ L40, false for 'update' @ L46
+[2026-10-06T14:55:38.671Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x2448d573 error. Code: 7 Message: 7 PERMISSION_DENIED:
+evaluation error at L18:24 for 'create' @ L18, false for 'create' @ L46, false for 'update' @ L40, false for 'update' @ L46, false for 'create' @ L18, false for 'create' @ L46
+[2026-10-06T14:55:38.681Z]  @firebase/firestore: Firestore (12.19.0): GrpcConnection RPC 'Write' stream 0x2448d574 error. Code: 7 Message: 7 PERMISSION_DENIED:
+evaluation error at L18:24 for 'create' @ L18, false for 'create' @ L46, false for 'update' @ L40, false for 'update' @ L46, false for 'create' @ L18, false for 'create' @ L46
+✔ scores are create-once and top aggregates are server-owned (125.279125ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1156.470167
+✔  Script exited successfully (code 0)
+i  emulators: Shutting down emulators.
+i  firestore: Stopping Firestore Emulator
+i  hub: Stopping emulator hub
+i  logging: Stopping Logging Emulator

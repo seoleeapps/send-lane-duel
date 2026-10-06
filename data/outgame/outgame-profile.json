@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "gameId": "send-lane-duel",
+  "mode": "local",
+  "newGame": true,
+  "features": {
+    "startup": {
+      "implemented": true,
+      "bindings": [
+        "godot/ui/main.gd"
+      ]
+    },
+    "tutorial": {
+      "implemented": false,
+      "bindings": []
+    },
+    "account_save": {
+      "implemented": true,
+      "bindings": [
+        "application/game_session.gd",
+        "adapters/save_store.gd"
+      ]
+    },
+    "settings_support": {
+      "implemented": false,
+      "bindings": [
+        "godot/ui/main.gd"
+      ]
+    },
+    "inbox": {
+      "implemented": false,
+      "bindings": []
+    },
+    "commerce": {
+      "implemented": true,
+      "bindings": [
+        "data/monetization/bm-profile.json"
+      ]
+    },
+    "observability": {
+      "implemented": false,
+      "bindings": []
+    },
+    "operations": {
+      "implemented": true,
+      "bindings": [
+        "godot/ui/main.gd"
+      ]
+    }
+  },
+  "optional": {
+    "attendance": {
+      "enabled": false,
+      "reason": "핵심 체험에 필요하지 않아 기본 미채택"
+    },
+    "missions": {
+      "enabled": false,
+      "reason": "핵심 체험에 필요하지 않아 기본 미채택"
+    },
+    "achievements": {
+      "enabled": false,
+      "reason": "핵심 체험에 필요하지 않아 기본 미채택"
+    },
+    "events": {
+      "enabled": false,
+      "reason": "핵심 체험에 필요하지 않아 기본 미채택"
+    },
+    "shop": {
+      "enabled": false,
+      "reason": "핵심 체험에 필요하지 않아 기본 미채택"
+    },
+    "pass": {
+      "enabled": false,
+      "reason": "핵심 체험에 필요하지 않아 기본 미채택"
+    },
+    "ranking": {
+      "enabled": true,
+      "reason": "일일 도전의 기기 기록만 구현. 온라인 순위 집계는 Production 단계."
+    },
+    "friends": {
+      "enabled": false,
+      "reason": "핵심 체험에 필요하지 않아 기본 미채택"
+    },
+    "guild": {
+      "enabled": false,
+      "reason": "핵심 체험에 필요하지 않아 기본 미채택"
+    },
+    "push": {
+      "enabled": false,
+      "reason": "핵심 체험에 필요하지 않아 기본 미채택"
+    },
+    "review": {
+      "enabled": false,
+      "reason": "핵심 체험에 필요하지 않아 기본 미채택"
+    }
+  },
+  "services": {
+    "auth": {
+      "status": "unsupported",
+      "exposed": false,
+      "binding": ""
+    },
+    "payments": {
+      "status": "unsupported",
+      "exposed": false,
+      "binding": ""
+    },
+    "ads": {
+      "status": "unsupported",
+      "exposed": false,
+      "binding": ""
+    },
+    "analytics": {
+      "status": "unsupported",
+      "exposed": false,
+      "binding": ""
+    },
+    "remote_config": {
+      "status": "unsupported",
+      "exposed": false,
+      "binding": ""
+    },
+    "mailbox": {
+      "status": "unsupported",
+      "exposed": false,
+      "binding": ""
+    }
+  },
+  "tutorial": {
+    "version": 1,
+    "actions": [],
+    "rewardKey": ""
+  },
+  "bmProfile": "data/monetization/bm-profile.json",
+  "evidence": {},
+  "verification": {
+    "runner": "scripts/check.sh"
+  },
+  "adoptedMarkets": [
+    "google_play",
+    "app_store"
+  ]
+}

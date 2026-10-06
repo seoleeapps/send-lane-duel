@@ -1,0 +1,154 @@
+{
+ "schema": "send-lane-duel.draft.v1",
+ "agentPurpose": "장 보상 3택 1 의 후보. 방어 계열·용병은 아직 편성에 없는 것만 나온다. 증표(boon)는 런 동안 한 번씩만 나온다. presets 는 런 시작 편성.",
+ "boons": [
+  {
+   "id": "boon_castle",
+   "name_ko": "성벽 보수",
+   "text_ko": "성 체력 +6",
+   "effect": {
+    "castle_hp": 6
+   }
+  },
+  {
+   "id": "boon_income",
+   "name_ko": "세금 장부",
+   "text_ko": "판마다 수입 +2",
+   "effect": {
+    "income": 2
+   }
+  },
+  {
+   "id": "boon_worker",
+   "name_ko": "일꾼 조합",
+   "text_ko": "일꾼 값 -2",
+   "effect": {
+    "worker_cost": -2
+   }
+  },
+  {
+   "id": "boon_slot",
+   "name_ko": "덧댄 진지",
+   "text_ko": "자리 +1",
+   "effect": {
+    "slots": 1
+   }
+  },
+  {
+   "id": "boon_capture",
+   "name_ko": "포로 수용소",
+   "text_ko": "막아 낸 묶음마다 포로가 된다",
+   "effect": {
+    "blocked_packs_per_captive": 1
+   }
+  },
+  {
+   "id": "boon_merc",
+   "name_ko": "용병 단골",
+   "text_ko": "용병 묶음 값 -1",
+   "effect": {
+    "merc_cost": -1
+   }
+  },
+  {
+   "id": "boon_chapter_gold",
+   "name_ko": "출정 자금",
+   "text_ko": "장을 시작할 때 금화 +15",
+   "effect": {
+    "chapter_gold": 15
+   }
+  },
+  {
+   "id": "boon_beat",
+   "name_ko": "북소리",
+   "text_ko": "내 레인 전투 박자 +1",
+   "effect": {
+    "beats": 1
+   }
+  },
+  {
+   "id": "boon_upgrade",
+   "name_ko": "대장간",
+   "text_ko": "강화 값 -3",
+   "effect": {
+    "upgrade_cost": -3
+   }
+  },
+  {
+   "id": "boon_breach",
+   "name_ko": "공성 망치",
+   "text_ko": "장마다 지휘관 성에 준 첫 피해 +3",
+   "effect": {
+    "first_hit_bonus": 3
+   }
+  }
+ ],
+ "presets": [
+  {
+   "id": "preset_a",
+   "name_ko": "첫 출정대",
+   "families": [
+    "fam_pierce",
+    "fam_blast"
+   ],
+   "mercs": [
+    "m_plate_swarm",
+    "m_hide_elite"
+   ],
+   "unlock": {
+    "medals": 0
+   }
+  },
+  {
+   "id": "preset_b",
+   "name_ko": "칼과 주문",
+   "families": [
+    "fam_slash",
+    "fam_arcane"
+   ],
+   "mercs": [
+    "m_light_swarm",
+    "m_ward_elite"
+   ],
+   "unlock": {
+    "medals": 30
+   }
+  },
+  {
+   "id": "preset_c",
+   "name_ko": "긴 사거리",
+   "families": [
+    "fam_pierce",
+    "fam_arcane"
+   ],
+   "mercs": [
+    "m_ward_swarm",
+    "m_plate_elite"
+   ],
+   "unlock": {
+    "medals": 60
+   }
+  },
+  {
+   "id": "preset_d",
+   "name_ko": "몰아치기",
+   "families": [
+    "fam_blast",
+    "fam_slash"
+   ],
+   "mercs": [
+    "m_hide_swarm",
+    "m_light_elite"
+   ],
+   "unlock": {
+    "medals": 100
+   }
+  }
+ ],
+ "medals": {
+  "per_chapter_cleared": 3,
+  "per_run_won": 6,
+  "daily_first_submit": 5,
+  "agentPurpose": "런 정산 훈장. 광고 2배는 이 합계에만 적용한다."
+ }
+}

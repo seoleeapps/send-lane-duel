@@ -1,0 +1,1 @@
+{"indexes":[{"collectionGroup":"scores","queryScope":"COLLECTION","fields":[{"fieldPath":"score","order":"DESCENDING"},{"fieldPath":"rounds_used","order":"ASCENDING"},{"fieldPath":"gold","order":"DESCENDING"},{"fieldPath":"submittedAt","order":"ASCENDING"}]}],"fieldOverrides":[]}
