@@ -1,5 +1,6 @@
 .godot/
 build/
+android/
 __pycache__/
 *.pyc
 .DS_Store
