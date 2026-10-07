@@ -5,6 +5,7 @@ import os
 from pathlib import Path
 import shutil
 import subprocess
+import xml.etree.ElementTree as ET
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -59,10 +60,31 @@ def check_resources(output):
         raise SystemExit("AAB native architectures do not match the ARM64 preset")
 
 
+def check_manifest(bundletool, output):
+    subprocess.run(["java", "-jar", str(bundletool), "validate", "--bundle=" + str(output)],
+                   check=True, timeout=60)
+    manifest = subprocess.check_output(["java", "-jar", str(bundletool), "dump", "manifest",
+                                      "--bundle=" + str(output), "--module=base"], timeout=60)
+    root = ET.fromstring(manifest)
+    android = "{http://schemas.android.com/apk/res/android}"
+    sdk, application = root.find("uses-sdk"), root.find("application")
+    if (root.get("package") != "com.seoleeapps.sendlaneduel"
+            or root.get(android + "versionCode") != "2"
+            or root.get(android + "versionName") != "0.1.1"
+            or sdk is None or sdk.get(android + "minSdkVersion") != "28"
+            or sdk.get(android + "targetSdkVersion") != "36"
+            or application is None or application.get(android + "appCategory") != "0"
+            or application.get(android + "isGame") != "true"
+            or application.get(android + "debuggable", "false") != "false"
+            or root.findall("uses-permission")):
+        raise SystemExit("AAB manifest does not match the offline game release preset")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--godot", default=os.environ.get("GODOT_BIN", "godot"))
     parser.add_argument("--template", type=Path, required=True)
+    parser.add_argument("--bundletool", type=Path, required=True)
     parser.add_argument("--upload-keystore", type=Path, required=True)
     parser.add_argument("--upload-env", type=Path, required=True)
     args = parser.parse_args()
@@ -77,7 +99,7 @@ def main():
                   if "=" in line and not line.lstrip().startswith("#"))
     password = values.get("GOOGLE_PLAY_UPLOAD_KEYSTORE_PASSWORD", "")
     alias = values.get("GOOGLE_PLAY_UPLOAD_KEY_ALIAS", "")
-    if not password or not alias:
+    if not password or alias != "send-lane-duel-upload":
         parser.error("Upload signing companion file is incomplete")
     environment = os.environ.copy()
     environment.update({
@@ -94,6 +116,7 @@ def main():
     if not output.is_file() or not output.stat().st_size:
         raise SystemExit("Godot did not produce an AAB")
     check_resources(output)
+    check_manifest(args.bundletool.resolve(), output)
     print("AAB:", output)
     print("SHA256:", hashlib.sha256(output.read_bytes()).hexdigest())
 
