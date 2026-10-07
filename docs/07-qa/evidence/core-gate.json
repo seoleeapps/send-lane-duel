@@ -127,7 +127,7 @@
     },
     {
       "path": "docs/07-qa/evidence/android-runtime.txt",
-      "sha256": "380d6526f37d9f3db3f0abed02c31c753b86de27acfa5f54a1f3564b583b3eba"
+      "sha256": "a894295afdfe84dbe282e58a37ff435607caf39294c6de505be09f4a7146156e"
     },
     {
       "path": "docs/07-qa/evidence/ui-save-guard.json",

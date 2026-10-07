@@ -8,7 +8,7 @@
 10-07 09:52:59.511  6489  6489 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
 10-07 09:52:59.512  6489  6489 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
 10-07 09:52:59.512  6489  6489 V GraphicsEnvironment: com.seoleeapps.sendlaneduel is not listed in per-application setting
-10-07 09:52:59.512  6489  6489 V GraphicsEnvironment: ANGLE allowlist from config: 
+10-07 09:52:59.512  6489  6489 V GraphicsEnvironment: ANGLE allowlist from config:
 10-07 09:52:59.512  6489  6489 V GraphicsEnvironment: com.seoleeapps.sendlaneduel is not listed in ANGLE allowlist or settings, returning default
 10-07 09:52:59.512  6489  6489 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
 --------- beginning of system
@@ -59,6 +59,6 @@
 10-07 09:53:05.955  6489  6510 D ps.sendlaneduel: PlayerBase::PlayerBase()
 10-07 09:53:05.955  6489  6510 D ps.sendlaneduel: TrackPlayerBase::TrackPlayerBase()
 10-07 09:53:05.955  6489  6510 I libOpenSLES: Emulating old channel mask behavior (ignoring positional mask 0x3, using default mask 0x3 based on channel count of 2)
-10-07 09:53:05.965  6489  6510 I godot   : 
+10-07 09:53:05.965  6489  6510 I godot   :
 10-07 09:53:06.233  6489  6510 V Godot   : OnGodotSetupCompleted
 10-07 09:53:06.243  6489  6510 V Godot   : OnGodotMainLoopStarted
