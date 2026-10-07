@@ -94,6 +94,10 @@ func check_bounds(node: Node) -> void:
 func run_test() -> void:
 	root.gui_embed_subwindows = true
 	var save_path: String = "user://tests-ui/save.json"
+	if not OS.get_cmdline_user_args().has("--save=" + save_path):
+		printerr("UI checks require -- --save=" + save_path + " to preserve the player save.")
+		quit(1)
+		return
 	DirAccess.make_dir_recursive_absolute("user://tests-ui")
 	Store.new(save_path).delete_local()
 	DirAccess.make_dir_recursive_absolute("res://docs/07-qa/captures")
