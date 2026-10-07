@@ -1,44 +1,92 @@
 {
-  "sourceCommit": "9991b2fc7966f22ef442c56a387c479f00ac341e",
-  "device": "Android 16 ARM64 emulator-5560",
+  "sourceCommit": "225932a5822e0454963ad6250ac538d68fbbb654",
+  "device": "Android 16 ARM64 ThreePurses_Playable_QA_20261007 / emulator-5582",
+  "fixture": "Separate new AVD, host OpenGL; own ADB 5041; emulator skip-adb-auth local test option. Existing user AVDs unchanged.",
   "pageSize": 4096,
   "actualPhone": false,
   "passed": true,
   "checks": {
-    "touchBuild": true,
-    "touchDeployAndSkip": true,
-    "roundSummary": true,
-    "forceStopRestoreActiveAndProfile": true,
-    "sessionCounterIncrement": true,
+    "touchPracticeThreeRounds": true,
+    "practicePreviewForceStopRestore": true,
+    "practicePendingResultForceStopRestore": true,
+    "practicePreservesExpeditionProfileDaily": true,
+    "updatedApkPreservesSave": true,
+    "touchExpeditionPlacementBattleAndResult": true,
+    "expeditionForceStopRestoreActiveProfileTutorial": true,
     "processRuntimeNoGodotErrors": true
   },
   "savedSteps": 2,
-  "captures": [
-    {
-      "path": "docs/07-qa/captures/android-battle.png",
-      "sha256": "c2539b0341d69c3312ab82e42e90536b81b256fef42a0ac6f7800bda47a94aa2"
-    },
-    {
-      "path": "docs/07-qa/captures/android-round-before-restart.png",
-      "sha256": "a9b92385c9a4475634990cb4a9e7a7381f1c6530aea74b8d8bcae955b789bf4d"
-    },
-    {
-      "path": "docs/07-qa/captures/android-round-resumed.png",
-      "sha256": "a9b92385c9a4475634990cb4a9e7a7381f1c6530aea74b8d8bcae955b789bf4d"
-    },
-    {
-      "path": "docs/07-qa/captures/android-summary.png",
-      "sha256": "cdd828e427db7bf69646caa4833c4310d84c15b643df3f06f9e5833eb44e9853"
-    },
-    {
-      "path": "docs/07-qa/captures/android-title.png",
-      "sha256": "6f56e52be200e5c9ebaf7cc3b62671b3fb7fad34e9de8aa02ff509fb13523247"
-    }
+  "practiceEvidenceSourceCommits": [
+    "0ab29670652b23acfafc22ea91a210f57525174c",
+    "f87e288174a24c03b7a09a4199db5692ee31f4a2"
   ],
+  "practiceCoreAndPersistenceUnchangedInFinalBuild": true,
   "finalBuildSmoke": {
-    "sourceCommit": "0d81fd36587a1b5cfadae4556c491e67fea197c6",
+    "sourceCommit": "225932a5822e0454963ad6250ac538d68fbbb654",
     "passed": true,
     "savePreserved": true,
     "runtimeErrors": 0
-  }
+  },
+  "captures": [
+    {
+      "path": "docs/07-qa/captures/android-title.png",
+      "sha256": "be02dd4319cef4c1c158d3d0841b5c194f279ebfb0f36a241044aa8357b92e59"
+    },
+    {
+      "path": "docs/07-qa/captures/android-battle.png",
+      "sha256": "79adac9a2e1785dc9d9b8cb82d13ded63f02d8436cb88ef48c4d6322a9578819"
+    },
+    {
+      "path": "docs/07-qa/captures/android-summary.png",
+      "sha256": "8b5f6555c794788a16fed6255791fb610f935dc693d0c050a103892fcb6c2d2a"
+    },
+    {
+      "path": "docs/07-qa/captures/android-round-before-restart.png",
+      "sha256": "08b244695b57849d02f76c13c59e35a55d83b526630a48aa51624137cc301f87"
+    },
+    {
+      "path": "docs/07-qa/captures/android-round-resumed.png",
+      "sha256": "be02dd4319cef4c1c158d3d0841b5c194f279ebfb0f36a241044aa8357b92e59"
+    },
+    {
+      "path": "docs/07-qa/captures/android-practice-intro.png",
+      "sha256": "4580f1d3ebd4d1c52fe07c9de9681374f46f99748778474369a8800e53b0c304"
+    },
+    {
+      "path": "docs/07-qa/captures/android-practice-defender.png",
+      "sha256": "824f3e672d35baccc4817e1cddc5ff10b3c68c1d5f71ff81537d8eceda94f756"
+    },
+    {
+      "path": "docs/07-qa/captures/android-practice-placed.png",
+      "sha256": "84fb495d92d6e3716844b75d46b08c659b3db472c5ee3e720c24039180bb143e"
+    },
+    {
+      "path": "docs/07-qa/captures/android-practice-placed-resumed.png",
+      "sha256": "84fb495d92d6e3716844b75d46b08c659b3db472c5ee3e720c24039180bb143e"
+    },
+    {
+      "path": "docs/07-qa/captures/android-practice-result.png",
+      "sha256": "5e612a0620523e29197a8c9a9feb5b99dfaa0db4ee2b36ba55cdcd913eef1a8f"
+    },
+    {
+      "path": "docs/07-qa/captures/android-practice-result-resumed.png",
+      "sha256": "5e612a0620523e29197a8c9a9feb5b99dfaa0db4ee2b36ba55cdcd913eef1a8f"
+    },
+    {
+      "path": "docs/07-qa/captures/android-practice-worker.png",
+      "sha256": "1cfa5af28a88ec0e69416ecd2d0d8608b10488b1b004db8860f2fb20b029c618"
+    },
+    {
+      "path": "docs/07-qa/captures/android-practice-send.png",
+      "sha256": "01849d373f2fed4c10edcb34cdafce31176b52c62a75d8cc680b0b12a049a3ac"
+    },
+    {
+      "path": "docs/07-qa/captures/android-practice-send-result.png",
+      "sha256": "3317b0f4911abeb1d63f6e08cfcc6a21c02822d7a577fbed0462cea0ada6f99a"
+    },
+    {
+      "path": "docs/07-qa/captures/android-practice-complete.png",
+      "sha256": "ac17bd8abd826f4141f26b594337f2872f0599884875e677b1b919958140ac8b"
+    }
+  ]
 }

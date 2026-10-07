@@ -2,10 +2,6 @@ keys,en,ko
 Retry,Retry,다시 시도
 Ready · 3/3,Ready · 3/3,준비 완료 · 3/3
 Hold. Grow. Send.,Hold. Grow. Send.,지키기 · 키우기 · 보내기
-"Core playtest build
-Offline expedition","Core playtest build
-Offline expedition","코어 플레이테스트 빌드
-오프라인 원정"
 Start,Start,시작
 Medals: %d,Medals: %d,훈장: %d
 Continue expedition,Continue expedition,이어서 출정
@@ -13,24 +9,16 @@ Expedition,Expedition,출정
 Daily challenge,Daily challenge,일일 도전
 Codex,Codex,도감
 Settings,Settings,설정
-Offline · core playtest,Offline · core playtest,오프라인 · 코어 플레이테스트
 Choose your formation,Choose your formation,출정 편성
-Rank %d,Rank %d,격 %d
 Unlock · %d medals,Unlock · %d medals,해금 · 훈장 %d
 Back,Back,뒤로
 Chapter %d · choose a route,Chapter %d · choose a route,%d장 · 길 선택
 Defense,Defense,방어
-Wave armor,Wave armor,웨이브 속성
+Wave armor,Wave armor,이번 판 적
 Take this route,Take this route,이 길로
 Pause,Pause,일시정지
 Chapter %d · round %d/7,Chapter %d · round %d/7,%d장 · %d/7판
 Gold %d   ·   next income %d,Gold %d   ·   next income %d,금화 %d   ·   다음 수입 %d
-Hold,Hold,지키기
-Grow,Grow,키우기
-Send,Send,보내기
-Tap a slot to build or upgrade,Tap a slot to build or upgrade,자리를 눌러 배치·강화
-Workers +%d · %d gold,Workers +%d · %d gold,일꾼 +%d · 금화 %d
-Wave leak %d + ?  ·  enemy damage %d,Wave leak %d + ?  ·  enemy damage %d,예상 누수 %d + ?  ·  상대 피해 %d
 Reset,Reset,되돌리기
 Deploy,Deploy,출전
 Slot %d,Slot %d,자리 %d
@@ -46,20 +34,17 @@ Captives: %d,Captives: %d,포로: %d
 Continue,Continue,계속
 Chapter reward,Chapter reward,장 보상
 Choose,Choose,선택
-Expedition complete,Expedition complete,런 정산
+Expedition complete,Expedition complete,원정 결과
 Victory,Victory,완주
 Castle lost,Castle lost,원정 종료
 Score %d · medals +%d,Score %d · medals +%d,점수 %d · 훈장 +%d
-Saved on device. Leaderboard connection pending.,Saved on device. Leaderboard connection pending.,기기에 기록 저장 · 온라인 순위 연결 준비 중
 Return home,Return home,본진으로
 Expedition paused,Expedition paused,원정 일시정지
 Progress saved. Abandon this run?,Progress saved. Abandon this run?,진행은 저장되었습니다. 이 런을 포기할까요?
 Abandon,Abandon,포기
 Same seed · first attempt only · no continue,Same seed · first attempt only · no continue,같은 시드 · 첫 시도만 기록 · 이어하기 없음
-Offline play available. Scores remain on this device until online services are ready.,Offline play available. Scores remain on this device until online services are ready.,오프라인 플레이 가능 · 온라인 연결 전에는 기록이 기기에만 저장됩니다.
 Practice,Practice,연습
 Challenge,Challenge,도전
-Commander codex,Commander codex,지휘관 도감
 Hold %d%% · grow %d%% · send %d%%,Hold %d%% · grow %d%% · send %d%%,지키기 %d%% · 키우기 %d%% · 보내기 %d%%
 Large text,Large text,큰 글자
 Reduce motion,Reduce motion,움직임 줄이기
@@ -120,3 +105,71 @@ boon_upgrade_description,Upgrade cost −3,강화 값 -3
 boon_breach_description,First castle hit +3 each chapter,장마다 지휘관 성에 준 첫 피해 +3
 New defender,New defender family,새 방어 계열
 New mercenary,New mercenary pack,새 용병 묶음
+Learn in three turns,Learn in three turns,세 판이면 알 수 있어요
+Protect your castle. Break theirs.,Protect your castle. Break theirs.,내 성을 지키고 상대 성을 무너뜨리세요.
+Spend gold before each automatic battle.,Spend gold before each automatic battle.,금화를 쓰고 출전하면 자동으로 싸웁니다.
+Defenders stay and stop enemies,Defenders stay and stop enemies,병사: 자리에 남아 적을 막아요
+Workers earn more gold every turn,Workers earn more gold every turn,일꾼: 매 판 받는 금화가 늘어요
+Mercenaries attack the rival castle,Mercenaries attack the rival castle,용병: 상대 성으로 공격을 보내요
+Practice keeps your expedition and medals safe.,Practice keeps your expedition and medals safe.,연습은 원정과 훈장에 영향을 주지 않아요.
+Try it now,Try it now,직접 해 보기
+Skip lesson,Skip lesson,건너뛰기
+Restart lesson,Restart lesson,연습 다시 시작
+You are ready!,You are ready!,준비됐어요!
+Start expedition,Start expedition,원정 시작
+Resume lesson,Resume lesson,연습 이어하기
+Learn to play,Learn to play,플레이 방법
+Set out · rank %d,Set out · rank %d,출정 · 난이도 %d
+Choose a rival. Each spends gold differently.,Choose a rival. Each spends gold differently.,상대를 고르세요. 각자 금화를 다르게 씁니다.
+Practice %d/3,Practice %d/3,연습 %d/3
+Ready! Press Deploy to see what happens.,Ready! Press Deploy to see what happens.,준비 끝! 출전을 눌러 결과를 보세요.
+Tap the outlined + below. Choose Marksmen.,Tap the outlined + below. Choose Marksmen.,아래 강조된 +를 누르고 저격대를 골라요.
+Press + to hire one worker. Income rises by %d.,Press + to hire one worker. Income rises by %d.,+를 눌러 일꾼을 고용해요. 매 판 수입 +%d.
+Tap Hide Champion %d more times to send %d packs.,Tap Hide Champion %d more times to send %d packs.,외피 정예를 %d번 더 눌러 %d묶음을 보내요.
+Defenders,Defenders,병사
+Workers,Workers,일꾼
+Mercenaries,Mercenaries,용병
+Tap your lower slots to build or upgrade,Tap your lower slots to build or upgrade,아래 내 자리를 눌러 배치·강화
+Hire +%d · %d gold each,Hire +%d · %d gold each,일꾼 +%d · 한 명 %d금화
+Castle preview: yours −%d + ? · rival −%d,Castle preview: yours −%d + ? · rival −%d,예상: 내 성 −%d + ? · 상대 −%d
+Help,Help,도움말
+How to play,How to play,플레이 방법
+"Choose your spending, then press Deploy.
+Enemies that get through damage the castle.","Choose your spending, then press Deploy.
+Enemies that get through damage the castle.","금화를 쓰고 출전을 누르세요.
+막지 못한 적이 성 체력을 깎습니다."
+"Your defender stays for the next battle.
+Next turn: +%d gold.","Your defender stays for the next battle.
+Next turn: +%d gold.","병사는 다음 판에도 자리에 남아요.
+다음 판에 금화 +%d."
+One worker: income %d → %d every turn.,One worker: income %d → %d every turn.,일꾼 한 명: 매 판 수입 %d → %d.
+"Sent %d packs → rival castle −%d.
+Mercenaries also raise future income by %d.","Sent %d packs → rival castle −%d.
+Mercenaries also raise future income by %d.","용병 %d묶음 → 상대 성 −%d.
+앞으로 받는 금화도 +%d 늘었어요."
+Practice paused,Practice paused,연습 일시정지
+Your lesson is saved. Resume it from home.,Your lesson is saved. Resume it from home.,연습이 저장됐어요. 본진에서 이어할 수 있어요.
+Practice save could not be restored. Restart the lesson.,Practice save could not be restored. Restart the lesson.,연습 기록을 읽지 못했어요. 연습만 다시 시작해 주세요.
+Complete the highlighted action first.,Complete the highlighted action first.,강조된 행동을 먼저 해 주세요.
+Rival castle,Rival castle,상대 성
+Your castle,Your castle,내 성
+Defenders stay here,Defenders stay here,내 병사는 여기에 남아요
+fam_pierce_short,MRK,저격
+fam_blast_short,BMB,포격
+fam_slash_short,CHG,돌격
+fam_arcane_short,HEX,주술
+Offline expedition · saved on this device,Offline expedition · saved on this device,오프라인 원정 · 이 기기에 저장됩니다
+Sound,Sound,소리
+Send,Send,보내기
+Rivals,Rivals,지휘관
+Rewards,Rewards,보상
+armor_plate,Plate,중갑
+armor_light,Light,경갑
+armor_hide,Hide,외피
+armor_ward,Ward,결계
+Strong: %s · weak: %s,Strong: %s · weak: %s,강함: %s · 약함: %s
+Build %d · upgrade %d / %d gold,Build %d · upgrade %d / %d gold,배치 %d · 강화 %d / %d금화
+%d gold → %d toys · %s,%d gold → %d toys · %s,%d금화 → %d개체 · %s
+Each: %d HP · castle damage %d,Each: %d HP · castle damage %d,개체당 체력 %d · 성 피해 %d
+Today's score is saved on this device.,Today's score is saved on this device.,오늘의 기록은 이 기기에 저장됩니다.
+Your best recorded score: %d,Your recorded score: %d,오늘 첫 도전 기록: %d점

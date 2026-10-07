@@ -13,6 +13,7 @@ commands = [
  ['godot', '--headless', '--path', '.', '--import', '--quit'],
  ['godot', '--headless', '--path', '.', '--script', 'res://tests/run_vectors.gd'],
  ['godot', '--headless', '--path', '.', '--script', 'res://tests/run_session.gd'],
+ ['godot', '--headless', '--path', '.', '--script', 'res://tests/run_practice.gd'],
  ['godot', '--headless', '--path', '.', '--script', 'res://tests/run_ads.gd'],
  ['godot', '--headless', '--path', '.', '--quit-after', '3', '--', '--save=user://tests-startup/save.json'],
 ]
@@ -28,6 +29,6 @@ for i, command in enumerate(commands):
   print(log)
   sys.exit(1)
  for line in log.splitlines():
-  if line.startswith(('VECTORS', 'SESSION', 'AD POLICY')): print(line)
+  if line.startswith(('VECTORS', 'SESSION', 'PRACTICE', 'AD POLICY')): print(line)
 print('Godot import, vectors, session and startup PASS')
 PY

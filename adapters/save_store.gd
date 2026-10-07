@@ -18,6 +18,16 @@ func valid(value: Variant) -> bool:
 	if not value.get("session_index") is int or value.session_index < 0: return false
 	if not value.get("tutorial") is Dictionary or not value.tutorial.get("version") is int \
 		or value.tutorial.version < 1 or not value.tutorial.get("completed") is bool: return false
+	var tutorial: Dictionary = value.tutorial
+	for key in ["active", "skipped", "awaiting_result"]:
+		if tutorial.has(key) and not tutorial[key] is bool: return false
+	if tutorial.has("steps"):
+		if not tutorial.steps is Array or tutorial.steps.size() > 3: return false
+		for action in tutorial.steps:
+			if not valid_plan(action): return false
+	if tutorial.has("plan") and not valid_plan(tutorial.plan): return false
+	for key in ["rules_version", "scenario"]:
+		if tutorial.has(key) and not tutorial[key] is String: return false
 	for key in ["unlocked", "dex"]:
 		for id in value.profile[key]:
 			if not id is String: return false
@@ -47,6 +57,10 @@ func valid(value: Variant) -> bool:
 			if not step.get("action") is Dictionary: return false
 		else: return false
 	return true
+
+func valid_plan(action: Variant) -> bool:
+	if not action is Dictionary: return false
+	return action.get("builds") is Array and action.get("workers") is int and action.workers >= 0 and action.get("packs") is Array
 
 func load_save() -> Dictionary:
 	recovered = false

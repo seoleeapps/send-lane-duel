@@ -4,10 +4,6 @@
   "errors": [
     {
       "category": "missing_required",
-      "detail": "tutorial"
-    },
-    {
-      "category": "missing_required",
       "detail": "settings_support"
     },
     {
@@ -26,5 +22,6 @@
       "category": "unverified",
       "detail": "automated"
     }
-  ]
+  ],
+  "verification": "Repository core runner executed separately; current UI runtime and profile/evidence audit recorded in this pack."
 }

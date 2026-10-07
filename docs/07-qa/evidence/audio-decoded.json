@@ -1,0 +1,20 @@
+[
+  {
+    "name": "menu",
+    "decodedPeak": 0.145981565117836,
+    "decodedSeamDelta": 0.0005602521611081102,
+    "sampleCount": 557056
+  },
+  {
+    "name": "march",
+    "decodedPeak": 0.14675380289554596,
+    "decodedSeamDelta": 0.0013663914833159652,
+    "sampleCount": 492288
+  },
+  {
+    "name": "boss",
+    "decodedPeak": 0.14558294415473938,
+    "decodedSeamDelta": 0.0012732634822896216,
+    "sampleCount": 492288
+  }
+]
