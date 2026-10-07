@@ -131,6 +131,7 @@ func _skip_practice() -> void:
 
 func _practice_complete() -> void:
 	practicing = false
+	allocation = "defense"
 	scene_state = "practice_complete"
 	_shell(tr("You are ready!"))
 	_label(tr("Protect your castle. Break theirs."), 23)

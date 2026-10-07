@@ -144,6 +144,7 @@ func run_test() -> void:
 	await capture("practice-result-en-360")
 	await click(find_button("Continue"))
 	check(main.scene_state == "practice_complete" and main.game.data.tutorial.completed, "completed through actual actions")
+	check(main.allocation == "defense", "expedition starts with defender controls after lesson")
 	check(main.game.data.profile == original and main.game.run == null, "lesson preserves medals and expedition")
 	await click(find_button("Return home"))
 	check(main.scene_state == "home", "lesson closes to home")
