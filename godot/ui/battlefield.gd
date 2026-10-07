@@ -70,8 +70,8 @@ func _draw_board(units: Array, y: float, clickable: bool) -> void:
 					if hit.beat == beat and hit.slot == i: recoil = -sin(beat_fraction * PI) * 3
 			var extent: float = 32 * [1.0, 1.12, 1.25][int(unit[1]) - 1]
 			_sprite(ART[unit[0]], Rect2(rect.position + Vector2((rect.size.x - extent) / 2, 1 + recoil), Vector2.ONE * extent))
-			_text(rect.position + Vector2(3, 44), tr(unit[0] + "_short"), GameSkin.PAPER, 11)
-			_text(rect.position + Vector2(rect.size.x - 17, 44), "•".repeat(unit[1]), GameSkin.BRASS, 8)
+			_text(rect.position + Vector2(3, 44), tr(unit[0] + "_short"), GameSkin.PAPER, 13)
+			for dot in range(unit[1]): draw_circle(rect.position + Vector2(rect.size.x - 16 + dot * 5, 41), 1.7, GameSkin.BRASS)
 
 func _draw_enemy(enemy: Array, point: Vector2, hp: int, alpha: float = 1.0) -> void:
 	var large: bool = int(enemy[2]) > 1
@@ -94,7 +94,7 @@ func _draw() -> void:
 	var final_beat: bool = not replay.is_empty() and beat >= last_beat
 	var my_hp: int = maxi(0, final_player_castle) if final_beat and final_player_castle >= 0 else player_castle
 	var rival_hp: int = maxi(0, final_enemy_castle) if final_beat and final_enemy_castle >= 0 else enemy_castle
-	_text(Vector2(8, 19), tr("Rival castle") + " ♥ %d  %s" % [rival_hp, ARMOR_SYMBOLS.get(armor, "?")], GameSkin.PAPER, 16)
+	_text(Vector2(8, 19), tr("Rival castle") + " ♥ %d · " % rival_hp + tr("armor_" + armor) + " " + ARMOR_SYMBOLS.get(armor, "?"), GameSkin.PAPER, 16)
 	_sprite("castle", Rect2(size.x - 38, 1, 32, 25))
 	_draw_board(enemy_board, 28, false)
 	var rows: int = 1 if board.size() <= 6 else 2
@@ -138,4 +138,4 @@ func _draw() -> void:
 	_text(Vector2(8, player_y - 7), tr("Your castle") + " ♥ %d" % my_hp, GameSkin.PAPER, 16)
 	_sprite("castle", Rect2(size.x - 38, player_y - 26, 32, 24))
 	_draw_board(board, player_y, true)
-	_text(Vector2(8, size.y - 5), tr("Defenders stay here"), Color("b8cbc8"), 12)
+	_text(Vector2(8, size.y - 5), tr("Defenders stay here"), Color("b8cbc8"), 13)
