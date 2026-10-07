@@ -1,0 +1,9 @@
+{
+  "schema": "send-lane-duel.practice.v1",
+  "seed": 1,
+  "preset": "preset_a",
+  "armor": "plate",
+  "mercenary": "m_hide_elite",
+  "packs": 3,
+  "purpose": "독립된 3판 연습. rules.tutorial의 철벽·성 체력·배치/일꾼/용병 순서를 사용한다. 마지막에 용병 3묶음의 실제 성 피해를 보여 준다. 원정·훈장·일일 기록에는 영향을 주지 않는다."
+}

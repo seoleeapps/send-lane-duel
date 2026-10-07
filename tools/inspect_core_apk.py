@@ -9,7 +9,8 @@ import zipfile
 
 
 def inspect(apk):
-    forbidden = ('build/', '.github/', 'docs/', 'tests/', 'tools/', 'scripts/', 'firebase/', 'release/', 'assets/art/concepts/')
+    forbidden = ('build/', '.github/', 'docs/', 'tests/', 'tools/', 'scripts/', 'firebase/', 'release/',
+                 'assets/art/concepts/', 'assets/art/raw/', 'assets/art/style/', 'assets/art/asset-manifest.json', 'assets/audio/sound-manifest.json')
     libraries = []
     with zipfile.ZipFile(apk) as archive, apk.open('rb') as raw:
         assets = [entry for entry in archive.infolist() if entry.filename.startswith('assets/')]

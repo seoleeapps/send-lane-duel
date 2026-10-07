@@ -15,12 +15,17 @@ func check(condition: bool, message: String) -> void:
 		printerr("FAIL UI " + message)
 
 func click(button: Button) -> void:
+	await process_frame
+	await RenderingServer.frame_post_draw
+	await create_timer(0.05).timeout
 	check(button != null and button.is_visible_in_tree() and not button.disabled, "button visible and enabled")
 	if button == null: return
 	var position: Vector2 = button.get_global_rect().get_center()
 	if button.get_window() != root:
 		position += Vector2(button.get_window().position)
 	await click_at(position)
+	for _i in range(3): await process_frame
+	await create_timer(0.05).timeout
 
 func click_at(position: Vector2, target: Viewport = null) -> void:
 	if target == null: target = root
@@ -99,7 +104,82 @@ func run_test() -> void:
 	check(main.scene_state == "title", "ready title")
 	await capture("title-en-360")
 	await click(find_button("Start"))
-	check(main.scene_state == "home", "start to home")
+	check(main.scene_state == "practice_intro", "first start teaches goal")
+	await capture("practice-intro-en-360")
+	await click(find_button("Try it now"))
+	check(main.practicing and find_button("Deploy").disabled, "practice gates deployment on action")
+	if main.field == null:
+		printerr("Practice launch state=%s error=%s session=%s" % [main.scene_state, main.lesson.error_message, main.game.error_message])
+		quit(1)
+		return
+	var original: Dictionary = main.game.data.profile.duplicate(true)
+	await RenderingServer.frame_post_draw
+	await click_at(main.field.global_position + main.field.slot_rects[0].get_center())
+	await click(find_button("Marksmen · 10"))
+	check(not find_button("Deploy").disabled, "placing actual defender enables deployment")
+	await capture("practice-defender-en-360")
+	await click(find_button("Deploy"))
+	await click(find_button("Skip"))
+	await click(find_button("Continue"))
+	check(main.lesson.step_index() == 1 and main.allocation == "workers", "result teaches worker next")
+	await click(find_button("+"))
+	main._home()
+	await process_frame
+	await click(find_button("Resume lesson"))
+	check(main.plan.workers == 1, "practice preview survives home and resume")
+	await capture("practice-worker-en-360")
+	await click(find_button("Deploy"))
+	await click(find_button("Skip"))
+	check(main.current_run().player.income() == 15, "actual worker income shown")
+	await click(find_button("Continue"))
+	for i in range(3):
+		await click(find_button("Hide Champion +%d · 8" % i))
+	check(main.plan.packs.size() == 3 and not find_button("Deploy").disabled, "three actual mercenary purchases")
+	await capture("practice-send-en-360")
+	await click(find_button("Deploy"))
+	await create_timer(0.4).timeout
+	await capture("practice-battle-en-360")
+	await click(find_button("Skip"))
+	check(main.result.cmd_damage == 8, "visible sending deals actual castle damage")
+	await capture("practice-result-en-360")
+	await click(find_button("Continue"))
+	check(main.scene_state == "practice_complete" and main.game.data.tutorial.completed, "completed through actual actions")
+	check(main.game.data.profile == original and main.game.run == null, "lesson preserves medals and expedition")
+	await click(find_button("Return home"))
+	check(main.scene_state == "home", "lesson closes to home")
+	# These fixed lesson fixtures check responsive layout, separately from input above.
+	for dimensions in [Vector2i(360, 640), Vector2i(390, 844), Vector2i(430, 932)]:
+		root.size = dimensions
+		root.content_scale_size = dimensions
+		main.game.setting("language", "ko")
+		main.game.setting("large_text", true)
+		TranslationServer.set_locale("ko")
+		main.lesson.start()
+		for action in [{"builds": [["place", 0, "fam_pierce"]], "workers": 0, "packs": []}, {"builds": [], "workers": 1, "packs": []}, {"builds": [], "workers": 0, "packs": ["m_hide_elite", "m_hide_elite", "m_hide_elite"]}]:
+			main._resume_practice()
+			for _i in range(4): await process_frame
+			check_bounds(main)
+			await capture("practice-%d-ko-large-%d" % [main.lesson.step_index() + 1, dimensions.x])
+			main.lesson.perform(action)
+			main.lesson.acknowledge()
+		main._practice_complete()
+		for _i in range(4): await process_frame
+		check_bounds(main)
+	root.size = Vector2i(360, 640)
+	root.content_scale_size = root.size
+	main.game.setting("language", "en")
+	main.game.setting("large_text", false)
+	TranslationServer.set_locale("en")
+	main._home()
+	await process_frame
+	main._codex()
+	for _i in range(3): await process_frame
+	for tab in ["Defenders", "Send", "Rewards", "Rivals"]:
+		await click(find_button(tab))
+		var cards: int = get_nodes_in_group("content-card").size()
+		check(cards == main.core.get(main.codex_tab).size(), "codex cards=%d expected=%d tab=%s" % [cards, main.core.get(main.codex_tab).size(), main.codex_tab])
+	await capture("codex-en-360")
+	main._home()
 	main.game.start(20261010, "preset_a")
 	main._show_run()
 	await process_frame

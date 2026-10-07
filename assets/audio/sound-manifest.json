@@ -1,0 +1,136 @@
+{
+  "source": "Original score and synthesis in tools/build_audio.py",
+  "license": "Project-owned original audio",
+  "apiCalls": 0,
+  "tracks": [
+    {
+      "name": "menu",
+      "path": "menu.ogg",
+      "seconds": 25.263,
+      "peak": 0.1451,
+      "seamDelta": 0.0001,
+      "sha256": "d2bfe17a7c2aa3a22a4a89fa6c9bf46158cb17e24ff68e29f359f73fb16e5ea3"
+    },
+    {
+      "name": "march",
+      "path": "march.ogg",
+      "seconds": 22.326,
+      "peak": 0.146,
+      "seamDelta": 0.000149,
+      "sha256": "d434468c0ce5863d27291f4af147fd86fdf9d69b5a18b60fa90f134a7782feb4"
+    },
+    {
+      "name": "boss",
+      "path": "boss.ogg",
+      "seconds": 22.326,
+      "peak": 0.1456,
+      "seamDelta": 4e-06,
+      "sha256": "d229de56c62cf2225148d4ac96b5a0711dc3d5e3e25c2cec977eccd1576b1178"
+    },
+    {
+      "name": "click",
+      "path": "click.wav",
+      "seconds": 0.33,
+      "peak": 0.1715,
+      "seamDelta": null,
+      "sha256": "b22abd39c46568fe96a947b172af572e9a9d6c7d081d3f67824b5ad8c67a5986"
+    },
+    {
+      "name": "place",
+      "path": "place.wav",
+      "seconds": 0.41,
+      "peak": 0.2505,
+      "seamDelta": null,
+      "sha256": "e8ab9de4ff8718b37ffae0001520df823c2640580fd78f320dbdcc5a64dff2da"
+    },
+    {
+      "name": "worker",
+      "path": "worker.wav",
+      "seconds": 0.49,
+      "peak": 0.2799,
+      "seamDelta": null,
+      "sha256": "9af1556f533ed4c879ea1ed0ab0faca065abc18379e3bc43a10f79f83f21cd4b"
+    },
+    {
+      "name": "send",
+      "path": "send.wav",
+      "seconds": 0.49,
+      "peak": 0.2909,
+      "seamDelta": null,
+      "sha256": "59644086558254dca6f41d7c0a69bbeed93dd156e650e733afbe7057b3bf6b4c"
+    },
+    {
+      "name": "coin",
+      "path": "coin.wav",
+      "seconds": 0.41,
+      "peak": 0.26,
+      "seamDelta": null,
+      "sha256": "0876604cc12b2da7cb9af3e08d1b1f2be464df07e422057e8fa6997992166c43"
+    },
+    {
+      "name": "shot",
+      "path": "shot.wav",
+      "seconds": 0.33,
+      "peak": 0.086,
+      "seamDelta": null,
+      "sha256": "253a45c7a0eae58e6f069703fab002b8f6c4f85acb1baf4a44ceaf5523e22a8b"
+    },
+    {
+      "name": "magic",
+      "path": "magic.wav",
+      "seconds": 0.41,
+      "peak": 0.2571,
+      "seamDelta": null,
+      "sha256": "4e8f59ea4f347239f37217470963b04bdaa75bb82256f00bcf0c5954b467b3af"
+    },
+    {
+      "name": "hoof",
+      "path": "hoof.wav",
+      "seconds": 0.41,
+      "peak": 0.1274,
+      "seamDelta": null,
+      "sha256": "a9908f1f0ec698ed09e08ce25a6a402ad34951e34ee8d475dd47f38783250398"
+    },
+    {
+      "name": "victory",
+      "path": "victory.wav",
+      "seconds": 0.57,
+      "peak": 0.2978,
+      "seamDelta": null,
+      "sha256": "8cf2d0ce13c9ee09995f2ce44db6eb1ecaeb38935f3b5008755278070c4d4053"
+    },
+    {
+      "name": "defeat",
+      "path": "defeat.wav",
+      "seconds": 0.49,
+      "peak": 0.2571,
+      "seamDelta": null,
+      "sha256": "f1da74c7ac578eac1a2d86819f0b3e9da7075f3e23b0f6ad8910e6493a61cfb1"
+    },
+    {
+      "name": "reveal",
+      "path": "reveal.wav",
+      "seconds": 0.49,
+      "peak": 0.2678,
+      "seamDelta": null,
+      "sha256": "503aca71ec043d5b5579b88aca39299709a44f0a5e13bf889e534b2fda9898bc"
+    },
+    {
+      "name": "boom",
+      "path": "boom.wav",
+      "seconds": 0.18,
+      "peak": 0.1294,
+      "seamDelta": null,
+      "sha256": "6c4ba5dd87cdeb0cf19a80e151d1af9a71c9fe06464c36350beeede7a60797da"
+    },
+    {
+      "name": "leak",
+      "path": "leak.wav",
+      "seconds": 0.3,
+      "peak": 0.1404,
+      "seamDelta": null,
+      "sha256": "6e14cd0b7fd17b72a144354ad67d584527b23cb5d0645302a54d117a82c3e4f9"
+    }
+  ],
+  "listeningReview": "Pending human review of finished build; numerical peak and seam analysis performed"
+}
