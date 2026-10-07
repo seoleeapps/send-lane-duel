@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "checkedAt": "2026-10-07",
-  "stage": "Core software",
+  "stage": "Playable local build",
   "overallGatePassed": false,
-  "implementationFingerprint": "aca948b1603be8e45d22f9257419517eaf10b6f3af3d2cff780af890dcfa4296",
+  "implementationFingerprint": "a04737f491333b3b7d7243451193db40b2626acf405f1ed513350edbae78f835",
   "checks": {
     "combatVectors": {
       "passed": true,
@@ -26,7 +26,7 @@
     },
     "renderInput": {
       "passed": true,
-      "assertions": 83,
+      "assertions": 202,
       "renderer": "Apple M3 OpenGL Compatibility",
       "humanPlaytest": false
     },
@@ -38,16 +38,36 @@
       "passed": true,
       "tests": 2,
       "deployed": false
+    },
+    "practice": {
+      "passed": true,
+      "assertions": 56,
+      "isolated": true,
+      "realActionsAndCombat": true
+    },
+    "android": {
+      "passed": true,
+      "actualPhone": false,
+      "pageSize": 4096,
+      "see": "docs/07-qa/evidence/android-runtime.json"
+    },
+    "uiSaveIsolation": {
+      "passed": true,
+      "refusesUnscopedInvocation": true,
+      "incidentPreviouslyOccurred": true
     }
   },
   "humanPlaytest": {
     "completed": 0,
     "required": 5,
-    "passed": false
+    "passed": false,
+    "deferredUntil": "Finished playable build, per user request 2026-10-07"
   },
   "artDirection": {
-    "status": "awaiting_user_selection",
-    "approved": false
+    "status": "B implemented; human review deferred",
+    "approved": false,
+    "nativeGeneratedImages": 8,
+    "comparison": "docs/07-qa/playable-visual-review.md"
   },
   "firebase": {
     "project": "send-lane-duel",
@@ -63,15 +83,15 @@
   "artifacts": [
     {
       "path": "docs/07-qa/evidence/android-build.json",
-      "sha256": "5dcf20eaa70ddb654188d9b6f181a4b2e53c2ad8f8754fda4e8a80a9739135e4"
+      "sha256": "1973713ac23a5522186539e9e497c1593265c61e47bb9ed2434cd19f5270349d"
     },
     {
       "path": "docs/07-qa/evidence/android-runtime.json",
-      "sha256": "c42724afb845d341db9fbdf7e5afe7429b8a19a44277cf5d0467b590bbd724dd"
+      "sha256": "baff34e4ac49addf8f1b95608c28eb5e9d40b8298ac22c104028616147e00300"
     },
     {
       "path": "docs/07-qa/evidence/apk-inspection.json",
-      "sha256": "d7287ffbea9ccd0e394fffca1c58b15d098d6017eb0f3099829d82fbfd3d5c41"
+      "sha256": "ec64f406d36c482fe8eb3ce125f7bb3505b0d125abdf24fbaa85ea528904905e"
     },
     {
       "path": "docs/07-qa/evidence/bm-validation.json",
@@ -79,7 +99,7 @@
     },
     {
       "path": "docs/07-qa/evidence/core-check.txt",
-      "sha256": "fea0ccd575db952a6fc423235efd6aa4b401f660041018248af451118a734888"
+      "sha256": "fc889ccd2a7f3f37cad86788e7ce50133ff1ac990e986709a4b6e3314c2c7ecf"
     },
     {
       "path": "docs/07-qa/evidence/firebase-rules.txt",
@@ -87,11 +107,11 @@
     },
     {
       "path": "docs/07-qa/evidence/outgame-implementation.json",
-      "sha256": "1ae691cd905133bf8b2266128ecf6c2ab600eeaec44cdb8bed96e35f3441055c"
+      "sha256": "7add3fbfd1f19c36f45e5b929809cc4f0c810a596f87b60d3025442d69b27c82"
     },
     {
       "path": "docs/07-qa/evidence/outgame-release.json",
-      "sha256": "0d909ff261c7ccc86c7ab41eec6cb0ab2dceda04229efc54fcf7d84e8b1f81d7"
+      "sha256": "7eab748da474d494c720e5981e586c3641f0658a0a48501901241ced51ef5846"
     },
     {
       "path": "docs/07-qa/evidence/run-sim.json",
@@ -99,7 +119,34 @@
     },
     {
       "path": "docs/07-qa/evidence/ui-check.txt",
-      "sha256": "9c4864277b87d18a1deb2122a0a35fb8a7d187336ab49d2089e4ac194cd48609"
+      "sha256": "37aef85854beb19ad1f8044b5c40d583c38058e0f003b876215dcd752c28ddd6"
+    },
+    {
+      "path": "docs/07-qa/evidence/audio-decoded.json",
+      "sha256": "3fc4fe2883291956bc63e2009847e2af86b90ec8d5d005057d657e46b948fa5f"
+    },
+    {
+      "path": "docs/07-qa/evidence/android-runtime.txt",
+      "sha256": "380d6526f37d9f3db3f0abed02c31c753b86de27acfa5f54a1f3564b583b3eba"
+    },
+    {
+      "path": "docs/07-qa/evidence/ui-save-guard.json",
+      "sha256": "87d6d57c6eec2eb9136b589cea1076c5cef2a2eaec26bee269101634d9c1faaa"
+    },
+    {
+      "path": "assets/art/asset-manifest.json",
+      "sha256": "4f16f16fc23d7b1977a5db40ea67010eea9aadf44a0c2ffd85891bb63d2f55ba"
+    },
+    {
+      "path": "assets/audio/sound-manifest.json",
+      "sha256": "c8604069ec0d357cc10f568b908a1f37bf98a78ed27bc906426a34de054d425a"
     }
-  ]
+  ],
+  "sourceCommit": "225932a5822e0454963ad6250ac538d68fbbb654",
+  "audio": {
+    "tracks": 16,
+    "apiCalls": 0,
+    "decodeClipping": 0,
+    "humanListeningCompleted": false
+  }
 }

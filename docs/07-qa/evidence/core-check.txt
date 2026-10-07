@@ -3,10 +3,11 @@ self-test OK: 난수 1, 상성 1, 웨이브 3, 전투 5, 런 3, 비용 1
 Architecture PASS: integer domain has no scene, IO, clock or platform dependencies
 ...
 ----------------------------------------------------------------------
-Ran 3 tests in 0.057s
+Ran 3 tests in 0.154s
 
 OK
 VECTORS combat=60/60 runs=40/40 assertions=962 failures=0
 SESSION checks=1807 failures=0 isolated_save=user://tests-session/save.json
+PRACTICE checks=56 failures=0 isolated=true
 AD POLICY checks=16 failures=0 live_sdk=false
 Godot import, vectors, session and startup PASS

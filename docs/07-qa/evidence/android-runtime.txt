@@ -1,0 +1,64 @@
+--------- beginning of main
+10-07 09:52:59.159  6489  6489 I ps.sendlaneduel: Late-enabling -Xcheck:jni
+10-07 09:52:59.213  6489  6489 I ps.sendlaneduel: Using CollectorTypeCMC GC.
+10-07 09:52:59.266  6489  6489 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+10-07 09:52:59.496  6489  6489 D nativeloader: Configuring clns-9 for other apk /data/app/~~DipKPnDiF8PohUVgVYlpMA==/com.seoleeapps.sendlaneduel-vbuoBJHpA16FEI-mli34Wg==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~DipKPnDiF8PohUVgVYlpMA==/com.seoleeapps.sendlaneduel-vbuoBJHpA16FEI-mli34Wg==/lib/arm64:/data/app/~~DipKPnDiF8PohUVgVYlpMA==/com.seoleeapps.sendlaneduel-vbuoBJHpA16FEI-mli34Wg==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.seoleeapps.sendlaneduel
+10-07 09:52:59.504  6489  6489 I ps.sendlaneduel: AssetManager2(0xb400006f183e6d98) locale list changing from [] to [en-US]
+10-07 09:52:59.511  6489  6489 V GraphicsEnvironment: Currently set values for:
+10-07 09:52:59.511  6489  6489 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+10-07 09:52:59.512  6489  6489 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+10-07 09:52:59.512  6489  6489 V GraphicsEnvironment: com.seoleeapps.sendlaneduel is not listed in per-application setting
+10-07 09:52:59.512  6489  6489 V GraphicsEnvironment: ANGLE allowlist from config: 
+10-07 09:52:59.512  6489  6489 V GraphicsEnvironment: com.seoleeapps.sendlaneduel is not listed in ANGLE allowlist or settings, returning default
+10-07 09:52:59.512  6489  6489 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+--------- beginning of system
+10-07 09:52:59.549  6489  6503 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+10-07 09:52:59.556  6489  6489 I ps.sendlaneduel: AssetManager2(0xb400006f183e3558) locale list changing from [] to [en-US]
+10-07 09:52:59.581  6489  6489 E ashmem  : Pinning is deprecated since Android Q. Please use trim or other methods.
+10-07 09:52:59.605  6489  6489 D CompatChangeReporter: Compat change id reported: 377864165; UID 10212; state: ENABLED
+10-07 09:52:59.613  6489  6489 D DesktopModeFlags: Toggle override initialized to: OVERRIDE_UNSET
+10-07 09:52:59.624  6489  6503 I EGL_emulation: Opening libGLESv1_CM_emulation.so
+10-07 09:52:59.626  6489  6503 I EGL_emulation: Opening libGLESv2_emulation.so
+10-07 09:52:59.649  6489  6503 W HWUI    : Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+10-07 09:52:59.650  6489  6503 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-07 09:52:59.652  6489  6489 D GodotActivity: Project command line parameters: [--xr_mode_regular, --xr-mode, off, --fullscreen, --background_color, #000000]
+10-07 09:52:59.659  6489  6489 D GodotActivity: Launch intent Intent { flg=0x10000000 xflg=0x5 cmp=com.seoleeapps.sendlaneduel/com.godot.game.GodotAppLauncher } with parameters []
+10-07 09:52:59.749  6489  6489 V GodotActivity: Creating new Godot fragment instance.
+10-07 09:53:00.012  6489  6489 V Godot   : Initializing Godot plugin registry
+10-07 09:53:00.022  6489  6489 I GodotPluginRegistry: Registering runtime plugin AndroidRuntime
+10-07 09:53:00.023  6489  6489 V Godot   : InitEngine with params: [--xr_mode_regular, --xr-mode, off, --fullscreen, --background_color, #000000]
+10-07 09:53:00.094  6489  6489 D nativeloader: Load /data/app/~~DipKPnDiF8PohUVgVYlpMA==/com.seoleeapps.sendlaneduel-vbuoBJHpA16FEI-mli34Wg==/lib/arm64/libgodot_android.so using class loader ns clns-9 (caller=/data/app/~~DipKPnDiF8PohUVgVYlpMA==/com.seoleeapps.sendlaneduel-vbuoBJHpA16FEI-mli34Wg==/base.apk!classes7.dex): ok
+10-07 09:53:00.100  6489  6489 V Godot   : Godot native layer initialization completed: true
+10-07 09:53:00.100  6489  6489 V Godot   : Setting up native layer with params: [--xr-mode, off, --fullscreen]
+10-07 09:53:00.174  6489  6489 V Godot   : Godot native layer setup completed
+10-07 09:53:00.175  6489  6489 V Godot   : OnInitRenderView: GodotFragment{d31bc07} (532d950f-7e60-4320-ace3-4904cc6fde99 id=0x7f07002c)
+10-07 09:53:00.186  6489  6489 W HWUI    : Image decoding logging dropped!
+10-07 09:53:00.191  6489  6489 W HWUI    : Image decoding logging dropped!
+10-07 09:53:00.192  6489  6489 W HWUI    : Image decoding logging dropped!
+10-07 09:53:00.254  6489  6489 D Godot   : Render view should be transparent: false
+10-07 09:53:00.255  6489  6489 D Godot   : renderingDevice: opengl3 (ProjectSettings)
+10-07 09:53:00.255  6489  6489 D Godot   : 			renderer: gl_compatibility (ProjectSettings)
+10-07 09:53:00.298  6489  6489 V Godot   : OnStart: GodotFragment{d31bc07} (532d950f-7e60-4320-ace3-4904cc6fde99 id=0x7f07002c)
+10-07 09:53:00.306  6489  6489 V Godot   : OnResume: GodotFragment{d31bc07} (532d950f-7e60-4320-ace3-4904cc6fde99 id=0x7f07002c)
+10-07 09:53:00.328  6489  6489 W HWUI    : Unknown dataspace 0
+10-07 09:53:00.335  6489  6489 D InsetsController: Setting requestedVisibleTypes to -16 (was -9)
+10-07 09:53:00.504  6489  6510 W RegularContextFactory: creating OpenGL ES 3.0 context :
+10-07 09:53:00.515  6489  6510 I godot   : Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+10-07 09:53:00.621  6489  6489 D InsetsController: hide(ime(), fromIme=false)
+10-07 09:53:00.621  6489  6489 I ImeTracker: com.seoleeapps.sendlaneduel:fd65fccd: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+10-07 09:53:00.769  6489  6510 E godot   : WARNING: Failed to load cached shader, recompiling.
+10-07 09:53:00.769  6489  6510 E godot   :    at: _load_from_cache (drivers/gles3/shader_gles3.cpp:615)
+10-07 09:53:00.907  6489  6489 W InteractionJankMonitor: Initializing without READ_DEVICE_CONFIG permission. enabled=false, interval=1, missedFrameThreshold=3, frameTimeThreshold=64, package=com.seoleeapps.sendlaneduel
+10-07 09:53:01.493  6489  6516 E SurfaceSyncGroup: Failed to receive transaction ready in 1000ms. Marking SurfaceSyncGroup(wmsSync-VRI[GodotAppLauncher]#1) as ready
+10-07 09:53:01.493  6489  6516 E SurfaceSyncGroup: Failed to receive transaction ready in 1000ms. Marking SurfaceSyncGroup(VRI[GodotAppLauncher]#2) as ready
+10-07 09:53:01.521  6489  6516 E SurfaceSyncGroup: Failed to receive transaction ready in 1000ms. Marking SurfaceSyncGroup(SurfaceView[com.seoleeapps.sendlaneduel/com.godot.game.GodotAppLauncher]#0) as ready
+10-07 09:53:02.503  6489  6493 I ps.sendlaneduel: Compiler allocated 5111KB to compile void android.view.ViewRootImpl.performTraversals()
+10-07 09:53:05.953  6489  6510 I godot   : OpenGL API OpenGL ES 3.0 (4.1 Metal - 90.5) - Compatibility - Using Device: Google (Apple) - Android Emulator OpenGL ES Translator (Apple M3)
+10-07 09:53:05.954  6489  6510 D AudioSystem: onNewServiceWithAdapter: media.audio_flinger service obtained 0xb400006f48471f00
+10-07 09:53:05.955  6489  6510 D AudioSystem: getService: checking for service media.audio_flinger: 0xb400006ea84fdc20
+10-07 09:53:05.955  6489  6510 D ps.sendlaneduel: PlayerBase::PlayerBase()
+10-07 09:53:05.955  6489  6510 D ps.sendlaneduel: TrackPlayerBase::TrackPlayerBase()
+10-07 09:53:05.955  6489  6510 I libOpenSLES: Emulating old channel mask behavior (ignoring positional mask 0x3, using default mask 0x3 based on channel count of 2)
+10-07 09:53:05.965  6489  6510 I godot   : 
+10-07 09:53:06.233  6489  6510 V Godot   : OnGodotSetupCompleted
+10-07 09:53:06.243  6489  6510 V Godot   : OnGodotMainLoopStarted

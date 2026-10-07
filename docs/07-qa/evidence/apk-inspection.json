@@ -1,10 +1,10 @@
 {
   "passed": true,
-  "sha256": "086721899e998fe44dcad28c52b9c73888ffd4766eb7def34593230a882b8349",
-  "bytes": 31627908,
-  "resourceCount": 35,
+  "sha256": "f8516f8d2f5679ea548afca8d9d9a50a67f3b9e3e9acbb3417c55650317dacd4",
+  "bytes": 34112703,
+  "resourceCount": 103,
   "unwantedResources": [],
-  "resourceCompressedBytes": 3378514,
+  "resourceCompressedBytes": 5153893,
   "libraries": [
     {
       "library": "lib/arm64-v8a/libc++_shared.so",

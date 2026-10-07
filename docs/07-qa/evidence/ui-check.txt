@@ -2,6 +2,22 @@ Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
 OpenGL API 4.1 Metal - 90.5 - Compatibility - Using Device: Apple - Apple M3
 
 CAPTURE title-en-360
+CAPTURE practice-intro-en-360
+CAPTURE practice-defender-en-360
+CAPTURE practice-worker-en-360
+CAPTURE practice-send-en-360
+CAPTURE practice-battle-en-360
+CAPTURE practice-result-en-360
+CAPTURE practice-1-ko-large-360
+CAPTURE practice-2-ko-large-360
+CAPTURE practice-3-ko-large-360
+CAPTURE practice-1-ko-large-390
+CAPTURE practice-2-ko-large-390
+CAPTURE practice-3-ko-large-390
+CAPTURE practice-1-ko-large-430
+CAPTURE practice-2-ko-large-430
+CAPTURE practice-3-ko-large-430
+CAPTURE codex-en-360
 CAPTURE slot-dialog-en-360
 CAPTURE round-en-360
 CAPTURE battle-en-360
@@ -11,4 +27,4 @@ CAPTURE round-ko-large-390
 CAPTURE round-ko-large-430
 CAPTURE mercs-max-ko-large-360
 CAPTURE settlement-en-360
-UI checks=83 failures=0 renderer=gl_compatibility
+UI checks=202 failures=0 renderer=gl_compatibility
