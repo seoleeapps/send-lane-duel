@@ -58,7 +58,10 @@
     ],
     "elfLoadAlignment16KB": true,
     "universalApkZipAlignment16KB": true,
-    "path": "build/android/three-purses.aab"
+    "path": "build/android/three-purses.aab",
+    "uploadCertificateConsoleVerified": true,
+    "uploadCertificateConsoleUrl": "https://play.google.com/console/u/0/developers/5547060480954653351/app/4973119814508655023/keymanagement",
+    "uploadCertificateObservedAt": "2026-10-07T10:38:55.422194+00:00"
   },
   "runtimeQA": {
     "device": "ThreePurses_Internal_QA_20261007 / emulator-5584",

@@ -1,0 +1,82 @@
+Google Play Console 로드 중
+notifications_unread
+읽지 않은 알림
+Three Purses
+keyboard_backspace
+모든 앱
+dashboard
+대시보드
+bar_chart
+통계
+overview
+게시 개요
+shield
+Google Play로 보호됨
+rocket_launch
+테스트 및 출시
+vital_signs
+모니터링 및 개선
+finance_mode
+사용자 늘리기
+sell
+Play를 통한 수익 창출
+keyboard_backspace
+Google Play로 보호됨
+앱 서명
+앱 서명 키를 관리하고 보호하세요. 더보기
+앱 서명 키
+사용 중
+설치한 사용자 수
+0.0%
+키 변경
+download
+인증서 다운로드
+content_copy
+SHA-256 인증서 지문
+content_copy
+SHA-1 인증서 지문
+이전 앱 서명 키
+처음 사용 날짜
+설치한 사용자 수
+7 10월 2026, 10:17
+0%
+양자 컴퓨팅 대비(베타)
+more_vert
+download
+업로드 키 인증서
+인증서 다운로드
+download
+비공개 업로드 키의 공개 인증서입니다. Google에서 개발자 본인이 제공한 업데이트인지 알 수 있도록 업로드 키를 사용하여 각 버전에 서명하세요. 아래 인증서를 사용하여 API 제공업체에 업로드 키를 등록하세요.
+MD5 인증서 지문
+5B:5E:5A:53:85:DD:5B:1C:BF:1C:FA:C9:E3:F1:71:EB
+content_copy
+SHA-1 인증서 지문
+CB:82:E6:2B:C3:3C:79:D6:CA:B2:E4:4C:F9:1C:EC:69:6E:85:8E:25
+content_copy
+SHA-256 인증서 지문
+35:E4:07:DB:C6:70:D5:A1:5D:40:F5:30:BA:52:BD:58:84:59:EB:A6:80:40:2C:61:D0:0B:19:54:2A:17:67:B4
+content_copy
+업로드 키 재설정 요청
+새 업로드 인증서를 사용하려면 업로드 키 재설정을 요청하세요.
+업로드 키 재설정 요청
+디지털 애셋 링크 JSON
+앱을 웹사이트 도메인과 연결하려면 이 스니펫을 복사하여 디지털 애셋 링크 JSON 파일에 붙여넣으세요. 비어 있지 않은 JSON 파일이 이미 있으면 문서 내용에 따라 이 스니펫을 기존 문과 함께 사용하세요. Android App Links를 사용하여 모바일 웹 사용자를 앱으로 보내려면 디지털 애셋 링크 JSON 파일이 필요합니다. 자세히 알아보기
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.seoleeapps.sendlaneduel",
+      "sha256_cert_fingerprints":
+        ["0D:AD:BC:DC:89:99:CB:21:13:C1:8A:5F:95:A7:C8:27:2F:A6:EA:3F:9A:B5:27:50:45:A0:2D:E0:2E:70:8D:8D"]
+    }
+  }
+]
+content_copy
+제품 업데이트
+상태 대시보드
+도움말
+© 2026 Google
+개인 정보 보호
+개발자 배포 계약
+서비스 약관
