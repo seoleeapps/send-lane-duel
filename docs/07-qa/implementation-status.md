@@ -1,6 +1,6 @@
 # Three Purses 제작·검증 상태
 
-확인일: 2026-10-07. **장난감 아트·전투 움직임·음악과 효과음·직접 조작하는 3턴 연습을 적용한 로컬 플레이 빌드 0.1.1/2를 만들었다.** 사용자의 “게임으로 만든 후에 다시 볼게” 요청으로 사람 검토를 이 빌드 이후로 옮겼다. 사람 결과는 0/5명이며 최종 시각 승인·재미 검증·온라인 서비스·출시는 남아 있다. 제작 순서 변경 근거는 [ADR-001](../02-decisions/ADR-001-approved-product.md)이다.
+확인일: 2026-10-07. **장난감 아트·전투 움직임·음악과 효과음·직접 조작하는 3턴 연습을 적용한 0.1.1/2를 Google Play 내부 테스트에 배포했다.** Seolee Apps 콘솔에서 활성·내부 테스터에게 제공됨을 다시 확인했고, [참여 링크](https://play.google.com/apps/internaltest/4701444918455309978)를 두 본인 Google 계정에서 확인했다. 사용자의 “게임으로 만든 후에 다시 볼게” 요청으로 사람 검토를 이 빌드 이후로 옮겼다. 사람 결과는 0/5명이며 최종 시각 승인·재미 검증·온라인 서비스·공개 출시는 남아 있다. 제작 순서와 내부 테스트 승인 근거는 [ADR-001](../02-decisions/ADR-001-approved-product.md)이다.
 
 ## 플레이 동작
 
@@ -33,7 +33,11 @@ UI 자동 입력은 첫 시작·연습 3단계·도감 4탭·슬롯 선택·일�
 
 ## Android 빌드
 
-[개발용 APK](../../build/android/three-purses-playable.apk)는 0.1.1/2, `com.seoleeapps.sendlaneduel`, ARM64 디버그 APK다. targetSdk 36, 비 Gradle Godot 템플릿 minSdk 24이며 제품 지원 하한 28은 Production Gradle 후보에 남아 있다. 서명·마켓 제출용 AAB가 아니다. 동결 소스 SHA·APK SHA는 `evidence/android-build.json`에 기록했다.
+[개발용 APK](../../build/android/three-purses-playable.apk)는 0.1.1/2, `com.seoleeapps.sendlaneduel`, ARM64 디버그 APK다. targetSdk 36, 비 Gradle Godot 템플릿 minSdk 24다. 서명·마켓 제출용 AAB가 아니다. 동결 소스 SHA·APK SHA는 `evidence/android-build.json`에 기록했다.
+
+[내부 테스트용 AAB](../../build/android/three-purses.aab)는 Godot 4.7.2 공식 Gradle 템플릿과 앱 전용 업로드 키를 사용한 release 빌드다. 제품 지원 하한 minSdk 28, targetSdk 36, ARM64, 게임 분류를 실제 매니페스트에서 확인했다. bundletool 검증·서명 지문 대조·ELF 16KB 정렬·AAB에서 생성한 APK의 ZIP 16KB 정렬을 통과했다. 이 APK를 별도 Android 16 ARM64 4KB AVD에 설치하여 첫 실행·수비병 배치와 첫 전투·연습 2단계 강제 종료 복귀를 확인했다. 서명키는 저장소 밖 카탈로그에 등록하고 로컬·BeeStation 암호화 백업의 임시 복원을 통과했다. [빌드 절차](../../play-store/README.md), [후보·배포 기록](../../release/internal-0.1.1-2.json), [콘솔 재조회](evidence/play-internal-release.txt).
+
+내부 테스트는 활성 상태이며 본인 계정 2개만 포함한 `Three Purses owner QA` 목록을 선택했다. 실제 Play Store 설치는 아직 확인하지 않았다. 초기 내부 테스트여서 Play에 `com.seoleeapps.sendlaneduel (unreviewed)`가 표시된다. 공개 스토어 등록·심사·프로덕션 출시는 별도다. 콘솔의 가독화 파일·네이티브 디버그 기호 미업로드 경고 2개는 출시 차단 오류가 아니며 기록에 남겼다.
 
 Android 16 에뮬레이터의 페이지 크기는 **4KB**다. ZIP/ELF 정렬 통과는 실제 16KB 기기 실행과 다르다. 실제 휴대폰·iPhone·16KB 기기 검사는 미실시다. 새 AVD 초기 실행 중 OS가 Activity를 다시 시작한 것은 별도로 조사했고, 안정된 콜드 스타트·터치·저장 복귀의 해당 게임 PID 로그에서 `SCRIPT ERROR`, `ERROR:`, `FATAL EXCEPTION`, `Fatal signal`은 0건이었다.
 
@@ -42,7 +46,7 @@ Android 16 에뮬레이터의 페이지 크기는 **4KB**다. ZIP/ELF 정렬 통
 1. [사람 5명 테스트](core-playtest.md): 4명 자발적 두 번째 런·3런 후 지휘관 성향 2개 설명. 현재 0/5명. 사용자 요청으로 아트·안내를 적용한 빌드 이후 실시한다. 밸런스는 임의 변경하지 않았다.
 2. 사용자 시각·조작성·음향 검토. 전체 첫 세션 시나리오, 적 구별 그림·전체 에셋 인수조건, 실제 기기 성능·접근성·현지화 검수는 남아 있다.
 3. Production: Firebase 익명 인증·클라우드 저장/충돌·온라인 순위와 일일 재생 검수 작업, 분석·오류 수집·원격 설정, AdMob/Poing 마켓별 동작·닫기·중복 보상 방지, 우편·문의·정책 연결.
-4. Hardening/Release: 실제 Android·iPhone·16KB 기기, 마켓 정책·상표/유사성 검토, 서명 후보와 실제 마켓 계정 확인. 과금 연결·심사 제출·공개 출시 권한은 없다.
+4. Hardening/Release: 실제 Android·iPhone·16KB 기기, Play 설치 확인, 마켓 정책·상표/유사성 검토, 출시 서비스가 포함된 서명 후보와 iOS archive. Android 내부 테스트 배포만 승인됐으며 과금 연결·심사 제출·공개 출시 권한은 없다.
 
 공통 아웃게임 전체 검사는 **미통과**다. 실제 연습 연결은 구현했지만 공통 영구 튜토리얼 보상 키는 채택하지 않았고, 설정의 지원/정책·우편·관측 기능·전체 계약 증거가 없다. 현재 검사 결과는 프로필/증거 감사이며 저장소 테스트를 별도로 실행했다. 출시 검사에는 실제 기기·최종 시각 승인·마켓 SDK 증거도 없다. [출시 원장](../../release/app-launch-ledger.json)의 90개 항목은 pending이며 로컬 빌드 완료를 출시 조건 전체 통과로 세지 않는다.
 

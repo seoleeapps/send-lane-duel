@@ -1,0 +1,101 @@
+{
+  "observedAt": "2026-10-07T10:30:25.554891+00:00",
+  "consoleAppId": "4973119814508655023",
+  "developerId": "5547060480954653351",
+  "accountName": "Seolee Apps",
+  "trackId": "4701444918455309978",
+  "releaseId": "1",
+  "releaseName": "0.1.1 (2) playable",
+  "trackStatus": "active",
+  "releaseStatus": "available-to-internal-testers",
+  "testerList": "Three Purses owner QA",
+  "testerListSelected": true,
+  "temporaryStoreName": "com.seoleeapps.sendlaneduel (unreviewed)",
+  "consoleUrl": "https://play.google.com/console/u/0/developers/5547060480954653351/app/4973119814508655023/tracks/4701444918455309978?tab=testers",
+  "reviewed": false,
+  "productionReleased": false,
+  "optInUrl": "https://play.google.com/apps/internaltest/4701444918455309978",
+  "optInVerifiedForOwnerAccounts": 2,
+  "releaseNotesLocales": [
+    "en-US",
+    "ko-KR"
+  ],
+  "releaseNotesReadbackMatches": true,
+  "testerCount": 2,
+  "warnings": [
+    "R8/ProGuard mapping file not supplied",
+    "Native debug symbols not supplied"
+  ],
+  "artifact": {
+    "sourceCommit": "8b304bab4e2e22fc306f2be4eae308e9e856a026",
+    "sha256": "964fd043cbcdb3960c3b69bc1ef60f38edcac7e9151d9729af1a79b621799010",
+    "bytes": 32271024,
+    "package": "com.seoleeapps.sendlaneduel",
+    "versionName": "0.1.1",
+    "versionCode": 2,
+    "minSdk": 28,
+    "targetSdk": 36,
+    "debugSigned": false,
+    "certificateSha256": "35:E4:07:DB:C6:70:D5:A1:5D:40:F5:30:BA:52:BD:58:84:59:EB:A6:80:40:2C:61:D0:0B:19:54:2A:17:67:B4",
+    "bundletool": "1.18.3",
+    "libraries": [
+      {
+        "library": "base/lib/arm64-v8a/libc++_shared.so",
+        "loadAlignments": [
+          16384,
+          16384,
+          16384
+        ]
+      },
+      {
+        "library": "base/lib/arm64-v8a/libgodot_android.so",
+        "loadAlignments": [
+          16384,
+          16384,
+          16384
+        ]
+      }
+    ],
+    "elfLoadAlignment16KB": true,
+    "universalApkZipAlignment16KB": true,
+    "path": "build/android/three-purses.aab"
+  },
+  "runtimeQA": {
+    "device": "ThreePurses_Internal_QA_20261007 / emulator-5584",
+    "androidVersion": "16",
+    "architecture": "arm64-v8a",
+    "pageSize": 4096,
+    "fixture": "Fresh AVD under build/qa/internal-avd, ADB port 5041; user saves unchanged",
+    "variant": "APK generated from the exact uploaded AAB with bundletool, signed by the upload key",
+    "checks": [
+      "cold start and title",
+      "first guided defender placement and battle",
+      "second tutorial turn persisted across force-stop and restart"
+    ],
+    "godotErrors": 0,
+    "fatalExceptions": 0,
+    "actualPhoneTested": false,
+    "playStoreInstallationTested": false,
+    "captures": [
+      {
+        "path": "build/qa/internal-title.png",
+        "sha256": "79a821ee912bdfa92d7f4a4da81440f28840f56db55dd9ab5505ea861b5fc7c1"
+      },
+      {
+        "path": "build/qa/internal-deployed.png",
+        "sha256": "90cc9fead30d533acac45db9241ab8e86151c9739848cd69f5fc983629f87b8e"
+      },
+      {
+        "path": "build/qa/internal-resumed.png",
+        "sha256": "90cc9fead30d533acac45db9241ab8e86151c9739848cd69f5fc983629f87b8e"
+      }
+    ]
+  },
+  "signingBackup": {
+    "catalogId": "app/send-lane-duel/google-play/upload-key",
+    "encryptedArchiveSha256": "d51752c6cccb09686cb966e909c530092c1c03d6bc3bc42389210579858fb614",
+    "localRestorePassed": true,
+    "beeStationRestorePassed": true,
+    "catalogErrors": 0
+  }
+}

@@ -1,0 +1,9 @@
+--------- beginning of main
+10-07 19:19:09.753  4396  4446 I godot   : Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+10-07 19:19:24.361  4396  4446 I godot   : OpenGL API OpenGL ES 3.0 (4.1 Metal - 90.5) - Compatibility - Using Device: Google (Apple) - Android Emulator OpenGL ES Translator (Apple M3)
+10-07 19:19:24.684  4396  4446 I godot   : 
+10-07 19:26:14.836  6834  6955 I godot   : Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+10-07 19:26:15.655  6834  6955 E godot   : WARNING: Failed to load cached shader, recompiling.
+10-07 19:26:15.655  6834  6955 E godot   :    at: _load_from_cache (drivers/gles3/shader_gles3.cpp:615)
+10-07 19:26:35.557  6834  6955 I godot   : OpenGL API OpenGL ES 3.0 (4.1 Metal - 90.5) - Compatibility - Using Device: Google (Apple) - Android Emulator OpenGL ES Translator (Apple M3)
+10-07 19:26:35.923  6834  6955 I godot   : 
