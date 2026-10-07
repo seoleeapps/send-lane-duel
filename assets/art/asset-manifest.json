@@ -13,43 +13,43 @@
       "name": "marksman",
       "size": 256,
       "transparent": true,
-      "prompt": "Wind-up wooden slingshot soldier, blue helmet and teal jacket."
+      "promptSummary": "Wind-up wooden slingshot soldier, blue helmet and teal jacket."
     },
     {
       "name": "bombard",
       "size": 256,
       "transparent": true,
-      "prompt": "Chunky brass cannon on walnut wheels with teal carriage."
+      "promptSummary": "Chunky brass cannon on walnut wheels with teal carriage."
     },
     {
       "name": "charger",
       "size": 256,
       "transparent": true,
-      "prompt": "Cream wooden horse on brass wheels with teal saddle."
+      "promptSummary": "Cream wooden horse on brass wheels with teal saddle."
     },
     {
       "name": "hexer",
       "size": 256,
       "transparent": true,
-      "prompt": "Violet wooden magic box with brass star on a spring."
+      "promptSummary": "Violet wooden magic box with brass star on a spring."
     },
     {
       "name": "swarm",
       "size": 256,
       "transparent": true,
-      "prompt": "Vermilion clockwork marble in brass wheeled ring."
+      "promptSummary": "Vermilion clockwork marble in brass wheeled ring."
     },
     {
       "name": "elite",
       "size": 256,
       "transparent": true,
-      "prompt": "Carved wooden bear in teal vest on wheeled brass platform."
+      "promptSummary": "Carved wooden bear in teal vest on wheeled brass platform."
     },
     {
       "name": "castle",
       "size": 256,
       "transparent": true,
-      "prompt": "Cream wooden block castle with teal pointed roofs and red pennants."
+      "promptSummary": "Cream wooden block castle with teal pointed roofs and red pennants."
     },
     {
       "name": "workbench",
@@ -59,7 +59,7 @@
         "width": 720,
         "height": 1280
       },
-      "prompt": "Walnut workbench with dark empty teal center and brass gears along edges."
+      "promptSummary": "Walnut workbench with dark empty teal center and brass gears along edges."
     }
   ],
   "uiSkins": {
@@ -90,5 +90,6 @@
       "teal",
       "brass"
     ]
-  }
+  },
+  "promptRecord": "Summaries of the native generation briefs; not a verbatim tool transcript."
 }

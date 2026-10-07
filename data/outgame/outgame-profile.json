@@ -11,8 +11,12 @@
       ]
     },
     "tutorial": {
-      "implemented": false,
-      "bindings": []
+      "implemented": true,
+      "bindings": [
+        "application/practice_session.gd",
+        "godot/ui/main.gd",
+        "data/core/practice.json"
+      ]
     },
     "account_save": {
       "implemented": true,
@@ -128,8 +132,13 @@
   },
   "tutorial": {
     "version": 1,
-    "actions": [],
-    "rewardKey": ""
+    "actions": [
+      "place_defender",
+      "add_worker",
+      "send_three_packs"
+    ],
+    "rewardKey": "",
+    "rewardPolicy": "Isolated practice uses real income and combat; no permanent currency or unlock reward."
   },
   "bmProfile": "data/monetization/bm-profile.json",
   "evidence": {},
